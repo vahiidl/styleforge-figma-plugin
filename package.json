@@ -1,0 +1,30 @@
+{
+  "name": "styleforge-figma-plugin",
+  "version": "1.0.0",
+  "description": "Import design tokens from popular CSS frameworks directly into Figma variables and styles.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite build --watch --config vite.config.ui.ts\" \"vite build --watch --config vite.config.main.ts\"",
+    "build": "vite build --config vite.config.ui.ts && vite build --config vite.config.main.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.104.0",
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.1.0",
+    "vite-plugin-singlefile": "^2.0.0",
+    "vitest": "^3.0.0"
+  }
+}
