@@ -1,5 +1,7 @@
 # StyleForge - Figma Plugin
 
+![StyleForge Banner](./banner.png)
+
 > Import design tokens from popular CSS frameworks directly into Figma variables and styles.
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -34,7 +36,8 @@ StyleForge bridges the gap between code and design. It fetches, parses, and impo
 ## Installation
 
 ### For Users
-*(Coming soon)* Install from the Figma Community
+
+[**Install from Figma Community**](https://www.figma.com/community/plugin/1606440312407932342/)
 
 ### For Developers
 
