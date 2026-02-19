@@ -1,6 +1,7 @@
 {
     "name": "StyleForge",
-    "id": "styleforge-figma-plugin",
+    "id": "1606440312407932342",
+    "documentAccess": "dynamic-page",
     "api": "1.0.0",
     "main": "dist/code.js",
     "ui": "dist/index.html",
