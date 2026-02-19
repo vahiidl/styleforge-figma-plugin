@@ -11,6 +11,8 @@ const TAILWIND_REPO = 'tailwindcss';
 const TAILWIND_FILE = 'packages/tailwindcss/theme.css';
 const TAILWIND_BRANCH = 'main';
 
+import fallbackCss from '../data/tailwind.css?raw';
+
 export const tailwindAdapter: LibraryAdapter = {
     id: 'tailwindcss',
     name: 'Tailwind CSS',
@@ -26,13 +28,19 @@ export const tailwindAdapter: LibraryAdapter = {
     ] as TokenCategory[],
 
     async fetchAndParse(): Promise<PrimitiveResult> {
-        // Fetch the theme.css from GitHub
-        const css = await fetchRawFromGitHub(
-            TAILWIND_OWNER,
-            TAILWIND_REPO,
-            TAILWIND_FILE,
-            TAILWIND_BRANCH
-        );
+        let css = '';
+        try {
+            // Fetch the theme.css from GitHub
+            css = await fetchRawFromGitHub(
+                TAILWIND_OWNER,
+                TAILWIND_REPO,
+                TAILWIND_FILE,
+                TAILWIND_BRANCH
+            );
+        } catch (error) {
+            console.warn('Failed to fetch Tailwind CSS from GitHub, using local fallback.', error);
+            css = fallbackCss;
+        }
 
         // Parse the @theme default { ... } block
         let vars = parseThemeBlock(css);
