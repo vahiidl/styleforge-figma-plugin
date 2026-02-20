@@ -12,7 +12,7 @@ export default function ImportProgress() {
                 <div className="result-title">Import Complete!</div>
                 <div className="result-message">{successMessage}</div>
                 <button className="btn btn-primary" onClick={reset} style={{ marginTop: 8 }}>
-                    Import Another Library
+                    Back
                 </button>
             </div>
         );

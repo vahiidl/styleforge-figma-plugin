@@ -117,13 +117,18 @@ function handleImport(payload: ImportPayload): void {
 
                 importThemeTokens(themeOptions, function (progress) {
                     postToUI({ type: 'IMPORT_PROGRESS', progress: progress });
+                }).then(function () {
+                    var allKeys = new Set(
+                        Object.keys(result.tokens.light).concat(Object.keys(result.tokens.dark))
+                    );
+                    totalCreated += allKeys.size;
+                    processAdapter(index + 1);
+                }).catch(function (error) {
+                    postToUI({
+                        type: 'IMPORT_ERROR',
+                        error: error instanceof Error ? error.message : 'Theme import failed',
+                    });
                 });
-
-                var allKeys = new Set(
-                    Object.keys(result.tokens.light).concat(Object.keys(result.tokens.dark))
-                );
-                totalCreated += allKeys.size;
-                processAdapter(index + 1);
             }
         }).catch(function (error) {
             postToUI({

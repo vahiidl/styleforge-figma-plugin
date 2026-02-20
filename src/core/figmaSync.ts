@@ -84,7 +84,7 @@ export async function importPrimitives(
     var total = countTokens(tokens, options);
     var current = 0;
 
-    var info = findOrCreateCollection(options.collectionName);
+    var info = await findOrCreateCollection(options.collectionName);
     var modeId = Object.values(info.modeIds)[0];
 
     // ── Pre-process Fonts & Weights (Needed for Text Styles) ──
@@ -95,7 +95,7 @@ export async function importPrimitives(
         for (const font of tokens.fonts) {
             const name = 'typography/family/' + font.name;
             const mappedFamily = mapFontFamily(font.family);
-            const v = setStringVariable(info.collection, modeId, name, mappedFamily);
+            const v = await setStringVariable(info.collection, modeId, name, mappedFamily);
             applyScopes(v, ['FONT_FAMILY'] as VariableScope[]);
             if (font.name === 'sans') defaultFontFamilyVar = v;
         }
@@ -106,7 +106,7 @@ export async function importPrimitives(
         onProgress && onProgress({ current: current, total: total, phase: 'Font Weights', message: 'Importing font weights...' });
         for (const fw of tokens.fontWeights) {
             const name = 'typography/weight/' + fw.path.join('/');
-            const v = setFloatVariable(info.collection, modeId, name, fw.value);
+            const v = await setFloatVariable(info.collection, modeId, name, fw.value);
             applyScopes(v, ['FONT_WEIGHT'] as VariableScope[]);
             if (fw.path.includes('normal') || fw.value === 400) defaultFontWeightVar = v;
             current++;
@@ -126,7 +126,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.colors.length; i++) {
             var color = tokens.colors[i];
             var name = 'colors/' + color.path.join('/');
-            var v = setColorVariable(info.collection, modeId, name, color.figmaColor);
+            var v = await setColorVariable(info.collection, modeId, name, color.figmaColor);
             applyScopes(v, ['ALL_FILLS', 'STROKE_COLOR', 'EFFECT_COLOR'] as VariableScope[]);
             current++;
             if (current % 20 === 0) {
@@ -141,7 +141,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.spacing.length; i++) {
             var sp = tokens.spacing[i];
             var name = 'spacing/' + sp.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, sp.value);
+            var v = await setFloatVariable(info.collection, modeId, name, sp.value);
             applyScopes(v, ['GAP', 'WIDTH_HEIGHT', 'PARAGRAPH_SPACING'] as VariableScope[]);
             current++;
         }
@@ -153,7 +153,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.radius.length; i++) {
             var rad = tokens.radius[i];
             var name = 'radius/' + rad.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, rad.value);
+            var v = await setFloatVariable(info.collection, modeId, name, rad.value);
             applyScopes(v, ['CORNER_RADIUS'] as VariableScope[]);
             current++;
         }
@@ -166,11 +166,11 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.blur.length; i++) {
             var bl = tokens.blur[i];
             var name = 'blur/' + bl.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, bl.value);
+            var v = await setFloatVariable(info.collection, modeId, name, bl.value);
             applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
 
             // Create Effect Style
-            createBlurStyle(name, bl.value, false, v); // isBackdrop = false
+            await createBlurStyle(name, bl.value, false, v); // isBackdrop = false
             current++;
         }
 
@@ -195,10 +195,10 @@ export async function importPrimitives(
             // Or create a new variable `backdrop-blur/xs`.
 
             const variableName = 'backdrop-blur/' + bl.path.join('/');
-            const v = setFloatVariable(info.collection, modeId, variableName, bl.value);
+            const v = await setFloatVariable(info.collection, modeId, variableName, bl.value);
             applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
 
-            createBlurStyle(variableName, bl.value, true, v);
+            await createBlurStyle(variableName, bl.value, true, v);
         }
 
         // Also process explicit backdrop tokens if any (and avoid duplicates?)
@@ -208,9 +208,9 @@ export async function importPrimitives(
             // If they are identical, we just overwrote them. That's fine.
             for (const bb of tokens.backdropBlur) {
                 const name = 'backdrop-blur/' + bb.path.join('/');
-                const v = setFloatVariable(info.collection, modeId, name, bb.value);
+                const v = await setFloatVariable(info.collection, modeId, name, bb.value);
                 applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
-                createBlurStyle(name, bb.value, true, v);
+                await createBlurStyle(name, bb.value, true, v);
             }
         }
     }
@@ -221,7 +221,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.opacity.length; i++) {
             var op = tokens.opacity[i];
             var name = 'opacity/' + op.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, op.value);
+            var v = await setFloatVariable(info.collection, modeId, name, op.value);
             applyScopes(v, ['OPACITY'] as VariableScope[]);
             current++;
         }
@@ -233,7 +233,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.breakpoints.length; i++) {
             var bp = tokens.breakpoints[i];
             var name = 'breakpoint/' + bp.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, bp.value);
+            var v = await setFloatVariable(info.collection, modeId, name, bp.value);
             applyScopes(v, ['WIDTH_HEIGHT'] as VariableScope[]);
             current++;
         }
@@ -245,7 +245,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.containers.length; i++) {
             var cont = tokens.containers[i];
             var name = 'container/' + cont.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, cont.value);
+            var v = await setFloatVariable(info.collection, modeId, name, cont.value);
             applyScopes(v, ['WIDTH_HEIGHT'] as VariableScope[]);
             current++;
         }
@@ -258,7 +258,7 @@ export async function importPrimitives(
         for (var i = 0; i < tokens.tracking.length; i++) {
             var tr = tokens.tracking[i];
             var name = 'typography/tracking/' + tr.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, tr.value);
+            var v = await setFloatVariable(info.collection, modeId, name, tr.value);
             applyScopes(v, ['LETTER_SPACING'] as VariableScope[]);
             // Store for binding if needed (though text styles usually don't map 1:1 to these unless specifically requested)
             current++;
@@ -276,7 +276,7 @@ export async function importPrimitives(
             if (ignore.includes(ld.path[0])) continue;
 
             var name = 'typography/leading/' + ld.path.join('/');
-            var v = setFloatVariable(info.collection, modeId, name, ld.value);
+            var v = await setFloatVariable(info.collection, modeId, name, ld.value);
             applyScopes(v, ['LINE_HEIGHT'] as VariableScope[]);
             current++;
         }
@@ -287,7 +287,7 @@ export async function importPrimitives(
         onProgress && onProgress({ current: current, total: total, phase: 'Max Width', message: 'Importing max-width grids...' });
         for (const mw of tokens.maxWidth) {
             const name = 'max-width/' + mw.path.join('/');
-            createGridStyle(name, mw.value);
+            await createGridStyle(name, mw.value);
             current++;
         }
     }
@@ -297,7 +297,7 @@ export async function importPrimitives(
         onProgress && onProgress({ current: current, total: total, phase: 'Border Width', message: 'Importing border width...' });
         for (const bw of tokens.borderWidth) {
             const name = 'border-width/' + bw.path.join('/');
-            const v = setFloatVariable(info.collection, modeId, name, bw.value);
+            const v = await setFloatVariable(info.collection, modeId, name, bw.value);
             applyScopes(v, ['STROKE_FLOAT'] as VariableScope[]);
             current++;
         }
@@ -318,7 +318,7 @@ export async function importPrimitives(
             // Typically opacity is 0-1 float.
             // If user provided custom values like 0, 1, 2... 100, then they are integers.
             // I will respect the parsed value from parser.
-            const v = setFloatVariable(info.collection, modeId, name, op.value);
+            const v = await setFloatVariable(info.collection, modeId, name, op.value);
             applyScopes(v, ['OPACITY'] as VariableScope[]);
             current++;
         }
@@ -329,7 +329,7 @@ export async function importPrimitives(
         onProgress && onProgress({ current: current, total: total, phase: 'Skew', message: 'Importing skew...' });
         for (const sk of tokens.skew) {
             const name = 'skew/' + sk.path.join('/');
-            const v = setFloatVariable(info.collection, modeId, name, sk.value);
+            const v = await setFloatVariable(info.collection, modeId, name, sk.value);
             // Explicitly remove all scopes as requested (skew has no scopes)
             applyScopes(v, []);
             current++;
@@ -344,7 +344,7 @@ export async function importPrimitives(
 
             // 1. Create Font Size Variable
             var sizeVarName = 'typography/size/' + typo.name;
-            var sizeVar = setFloatVariable(info.collection, modeId, sizeVarName, typo.fontSize);
+            var sizeVar = await setFloatVariable(info.collection, modeId, sizeVarName, typo.fontSize);
             applyScopes(sizeVar, ['FONT_SIZE'] as VariableScope[]);
 
             // 2. Create Line Height Variable (Specific to this text style)
@@ -356,7 +356,7 @@ export async function importPrimitives(
             }
 
             var lhVarName = 'typography/leading/' + typo.name;
-            var lhVar = setFloatVariable(info.collection, modeId, lhVarName, lineHeightPx);
+            var lhVar = await setFloatVariable(info.collection, modeId, lhVarName, lineHeightPx);
             applyScopes(lhVar, ['LINE_HEIGHT'] as VariableScope[]);
 
             // 3. Create Letter Spacing Variable
@@ -368,10 +368,10 @@ export async function importPrimitives(
             let lsVar: Variable | undefined;
             if (typo.letterSpacing !== undefined) {
                 var lsVarName = 'typography/letter-spacing/' + typo.name;
-                lsVar = setFloatVariable(info.collection, modeId, lsVarName, lsValue);
+                lsVar = await setFloatVariable(info.collection, modeId, lsVarName, lsValue);
             } else {
                 var normalName = 'typography/tracking/normal';
-                lsVar = setFloatVariable(info.collection, modeId, normalName, 0);
+                lsVar = await setFloatVariable(info.collection, modeId, normalName, 0);
             }
             applyScopes(lsVar, ['LETTER_SPACING'] as VariableScope[]);
 
@@ -388,7 +388,7 @@ export async function importPrimitives(
 
                     // Find specific variable for this weight
                     const wName = 'typography/weight/' + weightName;
-                    const wVar = setFloatVariable(info.collection, modeId, wName, fw.value);
+                    const wVar = await setFloatVariable(info.collection, modeId, wName, fw.value);
 
                     // Clone typo and override weight for this specific style
                     const specificTypo = { ...typo, fontWeight: fw.value };
@@ -411,7 +411,7 @@ export async function importPrimitives(
                     const match = tokens.fontWeights.find(fw => fw.value === typo.fontWeight);
                     if (match) {
                         const wName = 'typography/weight/' + match.path.join('/');
-                        specificWeightVar = setFloatVariable(info.collection, modeId, wName, match.value);
+                        specificWeightVar = await setFloatVariable(info.collection, modeId, wName, match.value);
                     }
                 }
 
@@ -438,7 +438,7 @@ export async function importPrimitives(
         onProgress && onProgress({ current: current, total: total, phase: 'Shadows', message: 'Importing shadows...' });
         for (var i = 0; i < tokens.shadows.length; i++) {
             var shadow = tokens.shadows[i];
-            createShadowStyle(shadow.name, shadow);
+            await createShadowStyle(shadow.name, shadow);
             current++;
         }
     }
@@ -449,10 +449,10 @@ export async function importPrimitives(
 
 // ─── Theme Collection Import (Light/Dark with Aliases) ───────────────────────
 
-export function importThemeTokens(
+export async function importThemeTokens(
     options: ThemeImportOptions,
     onProgress?: ProgressCallback
-): CollectionInfo {
+): Promise<CollectionInfo> {
     var allKeys = new Set([
         ...Object.keys(options.lightTokens),
         ...Object.keys(options.darkTokens),
@@ -460,19 +460,19 @@ export function importThemeTokens(
     var total = allKeys.size;
     var current = 0;
 
-    var info = findOrCreateCollection(options.collectionName);
+    var info = await findOrCreateCollection(options.collectionName);
     info = ensureModes(info, ['Light', 'Dark']);
     var lightModeId = info.modeIds['Light'];
     var darkModeId = info.modeIds['Dark'];
 
-    var primitiveCollections = figma.variables
-        .getLocalVariableCollections()
+    const allCollections = await figma.variables.getLocalVariableCollectionsAsync();
+    var primitiveCollections = allCollections
         .find(function (c: VariableCollection) { return c.name === options.primitiveCollectionName; });
 
     var primitiveVars: Variable[] = [];
     var primitiveModeId = '';
     if (primitiveCollections) {
-        primitiveVars = getVariablesInCollection(primitiveCollections.id);
+        primitiveVars = await getVariablesInCollection(primitiveCollections.id);
         if (primitiveCollections.modes.length > 0) {
             primitiveModeId = primitiveCollections.modes[0].modeId;
         }
@@ -491,7 +491,7 @@ export function importThemeTokens(
         var darkColor = darkValue ? parseColorValue(darkValue) : null;
 
         if (lightColor || darkColor) {
-            var variable = findOrCreateVariable(info.collection, cleanName, 'COLOR');
+            var variable = await findOrCreateVariable(info.collection, cleanName, 'COLOR');
             applyScopes(variable, ['ALL_FILLS', 'STROKE_COLOR', 'EFFECT_COLOR'] as VariableScope[]);
 
             if (lightColor) {
@@ -555,7 +555,7 @@ async function createTextStyle(
         }
     }
 
-    var existing = figma.getLocalTextStyles().find(function (s: TextStyle) { return s.name === name; });
+    var existing = (await figma.getLocalTextStylesAsync()).find(function (s: TextStyle) { return s.name === name; });
     var style = existing || figma.createTextStyle();
     style.name = name;
     style.fontName = fontName;
@@ -615,8 +615,9 @@ async function createTextStyle(
 
 // ─── Effect Style Creation ───────────────────────────────────────────────────
 
-function createShadowStyle(name: string, shadow: ParsedShadow): void {
-    var existing = figma.getLocalEffectStyles().find(function (s: EffectStyle) { return s.name === name; });
+async function createShadowStyle(name: string, shadow: ParsedShadow): Promise<void> {
+    const allEffectStyles = await figma.getLocalEffectStylesAsync();
+    var existing = allEffectStyles.find(function (s: EffectStyle) { return s.name === name; });
     var style = existing || figma.createEffectStyle();
     style.name = name;
 
@@ -633,8 +634,9 @@ function createShadowStyle(name: string, shadow: ParsedShadow): void {
     });
 }
 
-function createBlurStyle(name: string, radius: number, isBackdrop: boolean, variable?: Variable): void {
-    var existing = figma.getLocalEffectStyles().find(function (s: EffectStyle) { return s.name === name; });
+async function createBlurStyle(name: string, radius: number, isBackdrop: boolean, variable?: Variable): Promise<void> {
+    const allEffectStyles = await figma.getLocalEffectStylesAsync();
+    var existing = allEffectStyles.find(function (s: EffectStyle) { return s.name === name; });
     var style = existing || figma.createEffectStyle();
     style.name = name;
 
@@ -648,8 +650,9 @@ function createBlurStyle(name: string, radius: number, isBackdrop: boolean, vari
     } as Effect];
 }
 
-function createGridStyle(name: string, width: number): void {
-    var existing = figma.getLocalGridStyles().find(function (s: GridStyle) { return s.name === name; });
+async function createGridStyle(name: string, width: number): Promise<void> {
+    const allGridStyles = await figma.getLocalGridStylesAsync();
+    var existing = allGridStyles.find(function (s: GridStyle) { return s.name === name; });
     var style = existing || figma.createGridStyle();
     style.name = name;
 

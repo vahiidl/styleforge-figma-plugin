@@ -22,10 +22,9 @@ export interface VariableEntry {
 /**
  * Find an existing collection by name or create a new one.
  */
-export function findOrCreateCollection(name: string): CollectionInfo {
-    const existing = figma.variables
-        .getLocalVariableCollections()
-        .find((c: VariableCollection) => c.name === name);
+export async function findOrCreateCollection(name: string): Promise<CollectionInfo> {
+    const collections = await figma.variables.getLocalVariableCollectionsAsync();
+    const existing = collections.find((c: VariableCollection) => c.name === name);
 
     if (existing) {
         const modeIds: Record<string, string> = {};
@@ -82,14 +81,13 @@ export function ensureModes(
 /**
  * Find an existing variable by name in a collection, or create a new one.
  */
-export function findOrCreateVariable(
+export async function findOrCreateVariable(
     collection: VariableCollection,
     name: string,
     type: VariableResolvedDataType
-): Variable {
-    const existing = figma.variables
-        .getLocalVariables(type)
-        .find((v: Variable) => v.name === name && v.variableCollectionId === collection.id);
+): Promise<Variable> {
+    const allVars = await figma.variables.getLocalVariablesAsync(type);
+    const existing = allVars.find((v: Variable) => v.name === name && v.variableCollectionId === collection.id);
 
     if (existing) return existing;
 
@@ -99,13 +97,13 @@ export function findOrCreateVariable(
 /**
  * Create a color variable and set its value for a given mode.
  */
-export function setColorVariable(
+export async function setColorVariable(
     collection: VariableCollection,
     modeId: string,
     name: string,
     color: FigmaColor
-): Variable {
-    const variable = findOrCreateVariable(collection, name, 'COLOR');
+): Promise<Variable> {
+    const variable = await findOrCreateVariable(collection, name, 'COLOR');
     variable.setValueForMode(modeId, color);
     return variable;
 }
@@ -113,13 +111,13 @@ export function setColorVariable(
 /**
  * Create a float variable and set its value for a given mode.
  */
-export function setFloatVariable(
+export async function setFloatVariable(
     collection: VariableCollection,
     modeId: string,
     name: string,
     value: number
-): Variable {
-    const variable = findOrCreateVariable(collection, name, 'FLOAT');
+): Promise<Variable> {
+    const variable = await findOrCreateVariable(collection, name, 'FLOAT');
     variable.setValueForMode(modeId, value);
     return variable;
 }
@@ -127,13 +125,13 @@ export function setFloatVariable(
 /**
  * Create a string variable and set its value for a given mode.
  */
-export function setStringVariable(
+export async function setStringVariable(
     collection: VariableCollection,
     modeId: string,
     name: string,
     value: string
-): Variable {
-    const variable = findOrCreateVariable(collection, name, 'STRING');
+): Promise<Variable> {
+    const variable = await findOrCreateVariable(collection, name, 'STRING');
     variable.setValueForMode(modeId, value);
     return variable;
 }
@@ -202,8 +200,7 @@ export function resolveFloatAlias(
 /**
  * Get all local variables from a specific collection.
  */
-export function getVariablesInCollection(collectionId: string): Variable[] {
-    return figma.variables
-        .getLocalVariables()
-        .filter((v: Variable) => v.variableCollectionId === collectionId);
+export async function getVariablesInCollection(collectionId: string): Promise<Variable[]> {
+    const allVars = await figma.variables.getLocalVariablesAsync();
+    return allVars.filter((v: Variable) => v.variableCollectionId === collectionId);
 }
