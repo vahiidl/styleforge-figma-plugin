@@ -1,0 +1,330 @@
+{
+ "_source": {
+  "repo": "mui/material-ui",
+  "version": "9.2.0",
+  "extracted": "2026-07-17"
+ },
+ "colors": {
+  "primary/main": {
+   "Light": "#1976d2",
+   "Dark": "#90caf9"
+  },
+  "primary/light": {
+   "Light": "#42a5f5",
+   "Dark": "#e3f2fd"
+  },
+  "primary/dark": {
+   "Light": "#1565c0",
+   "Dark": "#42a5f5"
+  },
+  "primary/contrastText": {
+   "Light": "#fff",
+   "Dark": "rgba(0, 0, 0, 0.87)"
+  },
+  "secondary/main": {
+   "Light": "#9c27b0",
+   "Dark": "#ce93d8"
+  },
+  "secondary/light": {
+   "Light": "#ba68c8",
+   "Dark": "#f3e5f5"
+  },
+  "secondary/dark": {
+   "Light": "#7b1fa2",
+   "Dark": "#ab47bc"
+  },
+  "secondary/contrastText": {
+   "Light": "#fff",
+   "Dark": "rgba(0, 0, 0, 0.87)"
+  },
+  "error/main": {
+   "Light": "#d32f2f",
+   "Dark": "#f44336"
+  },
+  "error/light": {
+   "Light": "#ef5350",
+   "Dark": "#e57373"
+  },
+  "error/dark": {
+   "Light": "#c62828",
+   "Dark": "#d32f2f"
+  },
+  "error/contrastText": {
+   "Light": "#fff",
+   "Dark": "#fff"
+  },
+  "warning/main": {
+   "Light": "#ed6c02",
+   "Dark": "#ffa726"
+  },
+  "warning/light": {
+   "Light": "#ff9800",
+   "Dark": "#ffb74d"
+  },
+  "warning/dark": {
+   "Light": "#e65100",
+   "Dark": "#f57c00"
+  },
+  "warning/contrastText": {
+   "Light": "#fff",
+   "Dark": "rgba(0, 0, 0, 0.87)"
+  },
+  "info/main": {
+   "Light": "#0288d1",
+   "Dark": "#29b6f6"
+  },
+  "info/light": {
+   "Light": "#03a9f4",
+   "Dark": "#4fc3f7"
+  },
+  "info/dark": {
+   "Light": "#01579b",
+   "Dark": "#0288d1"
+  },
+  "info/contrastText": {
+   "Light": "#fff",
+   "Dark": "rgba(0, 0, 0, 0.87)"
+  },
+  "success/main": {
+   "Light": "#2e7d32",
+   "Dark": "#66bb6a"
+  },
+  "success/light": {
+   "Light": "#4caf50",
+   "Dark": "#81c784"
+  },
+  "success/dark": {
+   "Light": "#1b5e20",
+   "Dark": "#388e3c"
+  },
+  "success/contrastText": {
+   "Light": "#fff",
+   "Dark": "rgba(0, 0, 0, 0.87)"
+  },
+  "grey/50": {
+   "Light": "#fafafa",
+   "Dark": "#fafafa"
+  },
+  "grey/100": {
+   "Light": "#f5f5f5",
+   "Dark": "#f5f5f5"
+  },
+  "grey/200": {
+   "Light": "#eeeeee",
+   "Dark": "#eeeeee"
+  },
+  "grey/300": {
+   "Light": "#e0e0e0",
+   "Dark": "#e0e0e0"
+  },
+  "grey/400": {
+   "Light": "#bdbdbd",
+   "Dark": "#bdbdbd"
+  },
+  "grey/500": {
+   "Light": "#9e9e9e",
+   "Dark": "#9e9e9e"
+  },
+  "grey/600": {
+   "Light": "#757575",
+   "Dark": "#757575"
+  },
+  "grey/700": {
+   "Light": "#616161",
+   "Dark": "#616161"
+  },
+  "grey/800": {
+   "Light": "#424242",
+   "Dark": "#424242"
+  },
+  "grey/900": {
+   "Light": "#212121",
+   "Dark": "#212121"
+  },
+  "grey/A100": {
+   "Light": "#f5f5f5",
+   "Dark": "#f5f5f5"
+  },
+  "grey/A200": {
+   "Light": "#eeeeee",
+   "Dark": "#eeeeee"
+  },
+  "grey/A400": {
+   "Light": "#bdbdbd",
+   "Dark": "#bdbdbd"
+  },
+  "grey/A700": {
+   "Light": "#616161",
+   "Dark": "#616161"
+  },
+  "text/primary": {
+   "Light": "rgba(0, 0, 0, 0.87)",
+   "Dark": "#fff"
+  },
+  "text/secondary": {
+   "Light": "rgba(0, 0, 0, 0.6)",
+   "Dark": "rgba(255, 255, 255, 0.7)"
+  },
+  "text/disabled": {
+   "Light": "rgba(0, 0, 0, 0.38)",
+   "Dark": "rgba(255, 255, 255, 0.5)"
+  },
+  "background/paper": {
+   "Light": "#fff",
+   "Dark": "#121212"
+  },
+  "background/default": {
+   "Light": "#fff",
+   "Dark": "#121212"
+  },
+  "action/active": {
+   "Light": "rgba(0, 0, 0, 0.54)",
+   "Dark": "#fff"
+  },
+  "action/hover": {
+   "Light": "rgba(0, 0, 0, 0.04)",
+   "Dark": "rgba(255, 255, 255, 0.08)"
+  },
+  "action/selected": {
+   "Light": "rgba(0, 0, 0, 0.08)",
+   "Dark": "rgba(255, 255, 255, 0.16)"
+  },
+  "action/disabled": {
+   "Light": "rgba(0, 0, 0, 0.26)",
+   "Dark": "rgba(255, 255, 255, 0.3)"
+  },
+  "action/disabledBackground": {
+   "Light": "rgba(0, 0, 0, 0.12)",
+   "Dark": "rgba(255, 255, 255, 0.12)"
+  },
+  "action/focus": {
+   "Light": "rgba(0, 0, 0, 0.12)",
+   "Dark": "rgba(255, 255, 255, 0.12)"
+  },
+  "divider": {
+   "Light": "rgba(0, 0, 0, 0.12)",
+   "Dark": "rgba(255, 255, 255, 0.12)"
+  },
+  "common/black": {
+   "Light": "#000",
+   "Dark": "#000"
+  },
+  "common/white": {
+   "Light": "#fff",
+   "Dark": "#fff"
+  },
+  "text/icon": {
+   "Dark": "rgba(255, 255, 255, 0.5)"
+  }
+ },
+ "floats": {
+  "spacing/base": 8,
+  "radius/default": 4
+ },
+ "typography": {
+  "h1": {
+   "fontSize": "6rem",
+   "fontWeight": 300,
+   "lineHeight": 1.167,
+   "letterSpacing": "-0.01562em"
+  },
+  "h2": {
+   "fontSize": "3.75rem",
+   "fontWeight": 300,
+   "lineHeight": 1.2,
+   "letterSpacing": "-0.00833em"
+  },
+  "h3": {
+   "fontSize": "3rem",
+   "fontWeight": 400,
+   "lineHeight": 1.167,
+   "letterSpacing": "0em"
+  },
+  "h4": {
+   "fontSize": "2.125rem",
+   "fontWeight": 400,
+   "lineHeight": 1.235,
+   "letterSpacing": "0.00735em"
+  },
+  "h5": {
+   "fontSize": "1.5rem",
+   "fontWeight": 400,
+   "lineHeight": 1.334,
+   "letterSpacing": "0em"
+  },
+  "h6": {
+   "fontSize": "1.25rem",
+   "fontWeight": 500,
+   "lineHeight": 1.6,
+   "letterSpacing": "0.0075em"
+  },
+  "subtitle1": {
+   "fontSize": "1rem",
+   "fontWeight": 400,
+   "lineHeight": 1.75,
+   "letterSpacing": "0.00938em"
+  },
+  "subtitle2": {
+   "fontSize": "0.875rem",
+   "fontWeight": 500,
+   "lineHeight": 1.57,
+   "letterSpacing": "0.00714em"
+  },
+  "body1": {
+   "fontSize": "1rem",
+   "fontWeight": 400,
+   "lineHeight": 1.5,
+   "letterSpacing": "0.00938em"
+  },
+  "body2": {
+   "fontSize": "0.875rem",
+   "fontWeight": 400,
+   "lineHeight": 1.43,
+   "letterSpacing": "0.01071em"
+  },
+  "button": {
+   "fontSize": "0.875rem",
+   "fontWeight": 500,
+   "lineHeight": 1.75,
+   "letterSpacing": "0.02857em"
+  },
+  "caption": {
+   "fontSize": "0.75rem",
+   "fontWeight": 400,
+   "lineHeight": 1.66,
+   "letterSpacing": "0.03333em"
+  },
+  "overline": {
+   "fontSize": "0.75rem",
+   "fontWeight": 400,
+   "lineHeight": 2.66,
+   "letterSpacing": "0.08333em"
+  }
+ },
+ "shadows": {
+  "elevation-1": "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+  "elevation-2": "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+  "elevation-3": "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+  "elevation-4": "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+  "elevation-5": "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+  "elevation-6": "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+  "elevation-7": "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+  "elevation-8": "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+  "elevation-9": "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+  "elevation-10": "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+  "elevation-11": "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+  "elevation-12": "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+  "elevation-13": "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+  "elevation-14": "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+  "elevation-15": "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+  "elevation-16": "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+  "elevation-17": "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+  "elevation-18": "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+  "elevation-19": "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+  "elevation-20": "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+  "elevation-21": "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+  "elevation-22": "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+  "elevation-23": "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+  "elevation-24": "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)"
+ }
+}

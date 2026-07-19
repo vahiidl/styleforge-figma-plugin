@@ -6,6 +6,12 @@ import { tailwindAdapter } from './tailwindAdapter';
 import { shadcnAdapter } from './shadcnAdapter';
 import { baseUiAdapter } from './baseUiAdapter';
 import { cossAdapter } from './cossAdapter';
+import { radixColorsAdapter } from './radixColorsAdapter';
+import { muiAdapter } from './muiAdapter';
+import { chakraAdapter } from './chakraAdapter';
+import { mantineAdapter } from './mantineAdapter';
+import { daisyuiAdapter } from './daisyuiAdapter';
+import { bootstrapAdapter } from './bootstrapAdapter';
 
 /** All registered adapters, keyed by ID. */
 const adapters = new Map<string, LibraryAdapter>([
@@ -13,6 +19,12 @@ const adapters = new Map<string, LibraryAdapter>([
     [shadcnAdapter.id, shadcnAdapter],
     [baseUiAdapter.id, baseUiAdapter],
     [cossAdapter.id, cossAdapter],
+    [radixColorsAdapter.id, radixColorsAdapter],
+    [muiAdapter.id, muiAdapter],
+    [chakraAdapter.id, chakraAdapter],
+    [mantineAdapter.id, mantineAdapter],
+    [daisyuiAdapter.id, daisyuiAdapter],
+    [bootstrapAdapter.id, bootstrapAdapter],
 ]);
 
 /** Get all available adapters. */

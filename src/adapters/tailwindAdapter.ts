@@ -11,7 +11,7 @@ const TAILWIND_REPO = 'tailwindcss';
 const TAILWIND_FILE = 'packages/tailwindcss/theme.css';
 const TAILWIND_BRANCH = 'main';
 
-import fallbackCss from '../data/tailwind.css?raw';
+import fallbackCss from '../data/tailwind-theme.css.txt?raw';
 
 export const tailwindAdapter: LibraryAdapter = {
     id: 'tailwindcss',

@@ -10,6 +10,8 @@ import { colorsMatch } from './colorUtils';
 export interface CollectionInfo {
     collection: VariableCollection;
     modeIds: Record<string, string>; // e.g. { "Light": "mode-id-1", "Dark": "mode-id-2" }
+    /** True when the plan's mode limit prevented creating all requested modes. */
+    modeLimited?: boolean;
 }
 
 export interface VariableEntry {
@@ -62,18 +64,25 @@ export function ensureModes(
         modeIds[modeNames[0]] = firstMode.modeId;
     }
 
-    // Add additional modes
+    // Add additional modes. Free/Starter files allow only ONE mode per
+    // collection — addMode throws "Limited to 1 modes only". In that case we
+    // degrade gracefully: the import continues with the first mode only.
+    let modeLimited = false;
     for (let i = 1; i < modeNames.length; i++) {
         const existingMode = collection.modes.find((m: { name: string; modeId: string }) => m.name === modeNames[i]);
         if (existingMode) {
             modeIds[modeNames[i]] = existingMode.modeId;
         } else {
-            const newModeId = collection.addMode(modeNames[i]);
-            modeIds[modeNames[i]] = newModeId;
+            try {
+                const newModeId = collection.addMode(modeNames[i]);
+                modeIds[modeNames[i]] = newModeId;
+            } catch (e) {
+                modeLimited = true;
+            }
         }
     }
 
-    return { collection, modeIds };
+    return { collection, modeIds, modeLimited };
 }
 
 // ─── Variable Creation ───────────────────────────────────────────────────────
@@ -134,6 +143,18 @@ export async function setStringVariable(
     const variable = await findOrCreateVariable(collection, name, 'STRING');
     variable.setValueForMode(modeId, value);
     return variable;
+}
+
+/**
+ * Attach WEB code syntax (e.g. `var(--primary)`) so Dev Mode shows the CSS token.
+ * Safe no-op on API versions without codeSyntax support.
+ */
+export function setCodeSyntax(variable: Variable, css: string): void {
+    try {
+        variable.setVariableCodeSyntax('WEB', css);
+    } catch (e) {
+        // Older typings/plugin API — ignore.
+    }
 }
 
 /**

@@ -4,18 +4,17 @@ import LibraryCard from './LibraryCard';
 import { LIBRARIES } from '../libraryData';
 
 interface DashboardProps {
-    onImport: () => void;
+    onContinue: () => void;
 }
 
-export default function Dashboard({ onImport }: DashboardProps) {
+export default function Dashboard({ onContinue }: DashboardProps) {
     const {
         selectedLibraryIds,
         toggleLibrary,
-        setView,
-        setCollectionName
+        setCollectionName,
     } = useStore();
 
-    const handleStartImport = () => {
+    const handleContinue = () => {
         // Find the "primary" adapter for default collection name
         const selectedThemes = LIBRARIES.filter(lib =>
             selectedLibraryIds.includes(lib.id) && lib.type === 'theme'
@@ -27,11 +26,11 @@ export default function Dashboard({ onImport }: DashboardProps) {
             setCollectionName('TailwindCSS');
         }
 
-        onImport();
+        onContinue();
     };
 
     const tailwindLib = LIBRARIES.find(l => l.id === 'tailwindcss');
-    const themeLibs = LIBRARIES.filter(l => l.id !== 'tailwindcss');
+    const otherLibs = LIBRARIES.filter(l => l.id !== 'tailwindcss');
 
     return (
         <div className="dashboard-container">
@@ -57,10 +56,10 @@ export default function Dashboard({ onImport }: DashboardProps) {
                 )}
 
                 <div style={{ marginTop: '16px', marginBottom: '8px', fontSize: '13px', color: 'var(--sf-text-secondary)', lineHeight: 1.4 }}>
-                    You can also select additional theme tokens to generate variable modes:
+                    Add design systems to import alongside the primitives:
                 </div>
 
-                {themeLibs.map((lib) => (
+                {otherLibs.map((lib) => (
                     <LibraryCard
                         key={lib.id}
                         id={lib.id}
@@ -74,13 +73,13 @@ export default function Dashboard({ onImport }: DashboardProps) {
                 ))}
             </div>
 
-            <footer className="footer-cta">
+            <footer className="sticky-footer">
                 <button
                     className="btn btn-primary btn-full"
-                    onClick={handleStartImport}
+                    onClick={handleContinue}
                     disabled={selectedLibraryIds.length === 0}
                 >
-                    Start Import
+                    Continue
                 </button>
             </footer>
         </div>

@@ -51,8 +51,8 @@ export function parseJsonTokens(
                 ? stripPrefix(key)
                 : key;
 
-            if (value.Light) light[tokenName] = value.Light;
-            if (value.Dark) dark[tokenName] = value.Dark;
+            if (typeof value.Light === 'string') light[tokenName] = value.Light;
+            if (typeof value.Dark === 'string') dark[tokenName] = value.Dark;
         }
     }
 

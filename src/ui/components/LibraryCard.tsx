@@ -4,10 +4,21 @@ interface Props {
     id: string;
     name: string;
     description: string;
-    iconSrc: string;
+    iconSrc?: string;
     selected: boolean;
     locked?: boolean;
     onToggle: () => void;
+}
+
+/** Deterministic tile hue per library so letter icons stay distinguishable. */
+function letterTileStyle(name: string): React.CSSProperties {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) | 0;
+    const hue = Math.abs(hash) % 360;
+    return {
+        background: `hsl(${hue}, 25%, 45%)`,
+        color: '#fff',
+    };
 }
 
 export default function LibraryCard({ name, description, iconSrc, selected, locked, onToggle }: Props) {
@@ -27,7 +38,13 @@ export default function LibraryCard({ name, description, iconSrc, selected, lock
                 )}
             </div>
 
-            <img src={iconSrc} alt={name} className="library-icon-img" />
+            {iconSrc ? (
+                <img src={iconSrc} alt={name} className="library-icon-img" />
+            ) : (
+                <div className="library-icon-img library-icon-letter" style={letterTileStyle(name)}>
+                    {name.charAt(0).toUpperCase()}
+                </div>
+            )}
 
             <div className="library-info">
                 <div className="library-name">{name}</div>

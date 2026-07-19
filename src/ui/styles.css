@@ -11,9 +11,12 @@
   --sf-text-secondary: var(--figma-color-text-secondary, #b3b3b3);
   --sf-text-tertiary: var(--figma-color-text-tertiary, #808080);
   --sf-border: var(--figma-color-border, #444444);
+  /* Accent ("brand") colors invert with the Figma theme: white-on-dark, near-black-on-light.
+     Figma adds .figma-light / .figma-dark to <html> when themeColors is enabled. */
   --sf-brand: #ffffff;
   --sf-brand-hover: #e0e0e0;
   --sf-brand-subtle: rgba(255, 255, 255, 0.06);
+  --sf-on-brand: #1e1e1e;
   --sf-success: #a3a3a3;
   --sf-success-subtle: rgba(163, 163, 163, 0.12);
   --sf-error: #f87171;
@@ -23,6 +26,17 @@
   --sf-radius-lg: 12px;
   --sf-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --sf-transition: 150ms ease;
+}
+
+.figma-light {
+  --sf-brand: #1e1e1e;
+  --sf-brand-hover: #3d3d3d;
+  --sf-brand-subtle: rgba(0, 0, 0, 0.06);
+  --sf-on-brand: #ffffff;
+  --sf-success: #6b6b6b;
+  --sf-success-subtle: rgba(0, 0, 0, 0.08);
+  --sf-error: #dc2626;
+  --sf-error-subtle: rgba(220, 38, 38, 0.1);
 }
 
 * {
@@ -67,14 +81,14 @@ body {
 .header-logo {
   width: 24px;
   height: 24px;
-  background: #ffffff;
+  background: var(--sf-brand);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 12px;
-  color: #1e1e1e;
+  color: var(--sf-on-brand);
 }
 
 .header-title {
@@ -184,7 +198,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   transition: all var(--sf-transition);
-  color: #1e1e1e;
+  color: var(--sf-on-brand);
 }
 
 .library-card:hover .checkbox-container {
@@ -192,8 +206,8 @@ body {
 }
 
 .checkbox-container.checked {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: var(--sf-brand);
+  border-color: var(--sf-brand);
 }
 
 .checkbox-container.locked {
@@ -333,9 +347,9 @@ body {
 }
 
 .checkbox-item.checked .checkbox-indicator {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #1e1e1e;
+  background: var(--sf-brand);
+  border-color: var(--sf-brand);
+  color: var(--sf-on-brand);
 }
 
 /* ─── Preview Tree ────────────────────────────────────────────────────────── */
@@ -412,12 +426,12 @@ body {
 }
 
 .btn-primary {
-  background: #ffffff;
-  color: #1e1e1e;
+  background: var(--sf-brand);
+  color: var(--sf-on-brand);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #e0e0e0;
+  background: var(--sf-brand-hover);
 }
 
 .btn-primary:disabled {
@@ -464,7 +478,7 @@ body {
 
 .progress-bar-fill {
   height: 100%;
-  background: #ffffff;
+  background: var(--sf-brand);
   border-radius: 99px;
   transition: width 300ms ease;
 }
@@ -504,7 +518,7 @@ body {
 
 .result-icon.success {
   background: var(--sf-brand-subtle);
-  color: #ffffff;
+  color: var(--sf-brand);
 }
 
 .result-icon.error {
@@ -528,7 +542,7 @@ body {
   width: 28px;
   height: 28px;
   border: 2px solid var(--sf-bg-tertiary);
-  border-top-color: #ffffff;
+  border-top-color: var(--sf-brand);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -555,4 +569,195 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--sf-text-tertiary);
+}
+/* ─── Config sub-controls ─────────────────────────────────────────────────── */
+.config-sublabel {
+  font-size: 12px;
+  color: var(--sf-text-secondary);
+  margin-bottom: 4px;
+}
+
+select.config-input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.config-textarea {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 11px;
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ─── Letter icon tiles (libraries without a PNG) ─────────────────────────── */
+.library-icon-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ─── Diff review ─────────────────────────────────────────────────────────── */
+.diff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.diff-collection {
+  border: 1px solid var(--sf-border);
+  border-radius: var(--sf-radius);
+  overflow: hidden;
+}
+
+.diff-collection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--sf-bg-secondary);
+}
+
+.diff-rows {
+  padding: 6px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.diff-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--sf-border);
+}
+
+.diff-row:last-child {
+  border-bottom: none;
+}
+
+.diff-name {
+  font-weight: 600;
+  color: var(--sf-text);
+}
+
+.diff-name em {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--sf-text-tertiary);
+}
+
+.diff-name.diff-added {
+  color: var(--sf-success);
+}
+
+.diff-values {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sf-text-secondary);
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 10px;
+  flex-wrap: wrap;
+}
+
+.diff-arrow {
+  color: var(--sf-text-tertiary);
+}
+
+.diff-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--sf-border);
+  flex-shrink: 0;
+}
+
+.diff-more {
+  color: var(--sf-text-tertiary);
+  border-bottom: none;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ─── Sticky action footer (always reachable CTA) ─────────────────────────── */
+.sticky-footer {
+  position: sticky;
+  bottom: -16px; /* counteract .content padding so it hugs the plugin edge */
+  margin: 16px -16px -16px;
+  padding: 12px 16px 16px;
+  background: var(--sf-bg);
+  border-top: 1px solid var(--sf-border);
+  z-index: 5;
+}
+
+.dashboard-container .sticky-footer {
+  margin-top: auto;
+}
+
+/* ─── Selects: chevron + interactive states ───────────────────────────────── */
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap .config-input {
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.select-wrap .config-input:hover {
+  border-color: var(--sf-text-secondary);
+}
+
+.select-wrap .config-input:focus-visible {
+  border-color: var(--sf-brand);
+  outline: none;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--sf-text-tertiary);
+}
+
+.select-wrap:hover .select-chevron {
+  color: var(--sf-text-secondary);
+}
+
+/* ─── Inline validation under the DTCG textarea ───────────────────────────── */
+.config-validation {
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.config-validation.ok {
+  color: var(--sf-success);
+}
+
+.config-validation.error {
+  color: var(--sf-error);
+}
+
+/* ─── Warning notice (plan limitations) ───────────────────────────────────── */
+.notice-warning {
+  background: var(--sf-error-subtle);
+  color: var(--sf-text);
+}
+
+.notice-warning .dependency-notice-icon {
+  color: var(--sf-error);
 }

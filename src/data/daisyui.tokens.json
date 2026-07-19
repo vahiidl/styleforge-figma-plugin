@@ -1,0 +1,103 @@
+{
+ "_source": {
+  "repo": "saadeghi/daisyui",
+  "version": "5.6.18",
+  "extracted": "2026-07-17"
+ },
+ "base-100": {
+  "Light": "oklch(100% 0 0)",
+  "Dark": "oklch(25.33% 0.016 252.42)"
+ },
+ "base-200": {
+  "Light": "oklch(98% 0 0)",
+  "Dark": "oklch(23.26% 0.014 253.1)"
+ },
+ "base-300": {
+  "Light": "oklch(95% 0 0)",
+  "Dark": "oklch(21.15% 0.012 254.09)"
+ },
+ "base-content": {
+  "Light": "oklch(21% 0.006 285.885)",
+  "Dark": "oklch(97.807% 0.029 256.847)"
+ },
+ "primary": {
+  "Light": "oklch(45% 0.24 277.023)",
+  "Dark": "oklch(58% 0.233 277.117)"
+ },
+ "primary-content": {
+  "Light": "oklch(93% 0.034 272.788)",
+  "Dark": "oklch(96% 0.018 272.314)"
+ },
+ "secondary": {
+  "Light": "oklch(65% 0.241 354.308)",
+  "Dark": "oklch(65% 0.241 354.308)"
+ },
+ "secondary-content": {
+  "Light": "oklch(94% 0.028 342.258)",
+  "Dark": "oklch(94% 0.028 342.258)"
+ },
+ "accent": {
+  "Light": "oklch(77% 0.152 181.912)",
+  "Dark": "oklch(77% 0.152 181.912)"
+ },
+ "accent-content": {
+  "Light": "oklch(38% 0.063 188.416)",
+  "Dark": "oklch(38% 0.063 188.416)"
+ },
+ "neutral": {
+  "Light": "oklch(14% 0.005 285.823)",
+  "Dark": "oklch(14% 0.005 285.823)"
+ },
+ "neutral-content": {
+  "Light": "oklch(92% 0.004 286.32)",
+  "Dark": "oklch(92% 0.004 286.32)"
+ },
+ "info": {
+  "Light": "oklch(74% 0.16 232.661)",
+  "Dark": "oklch(74% 0.16 232.661)"
+ },
+ "info-content": {
+  "Light": "oklch(29% 0.066 243.157)",
+  "Dark": "oklch(29% 0.066 243.157)"
+ },
+ "success": {
+  "Light": "oklch(76% 0.177 163.223)",
+  "Dark": "oklch(76% 0.177 163.223)"
+ },
+ "success-content": {
+  "Light": "oklch(37% 0.077 168.94)",
+  "Dark": "oklch(37% 0.077 168.94)"
+ },
+ "warning": {
+  "Light": "oklch(82% 0.189 84.429)",
+  "Dark": "oklch(82% 0.189 84.429)"
+ },
+ "warning-content": {
+  "Light": "oklch(41% 0.112 45.904)",
+  "Dark": "oklch(41% 0.112 45.904)"
+ },
+ "error": {
+  "Light": "oklch(71% 0.194 13.428)",
+  "Dark": "oklch(71% 0.194 13.428)"
+ },
+ "error-content": {
+  "Light": "oklch(27% 0.105 12.094)",
+  "Dark": "oklch(27% 0.105 12.094)"
+ },
+ "float:radius-selector": {
+  "Light": "0.5rem",
+  "Dark": "0.5rem"
+ },
+ "float:radius-field": {
+  "Light": "0.25rem",
+  "Dark": "0.25rem"
+ },
+ "float:radius-box": {
+  "Light": "0.5rem",
+  "Dark": "0.5rem"
+ },
+ "float:border": {
+  "Light": "1px",
+  "Dark": "1px"
+ }
+}

@@ -1,0 +1,3079 @@
+{
+ "_source": {
+  "repo": "radix-ui/colors",
+  "version": "3.0.0",
+  "extracted": "2026-07-17"
+ },
+ "amber/1": {
+  "Light": "#fefdfb",
+  "Dark": "#16120c"
+ },
+ "amber/2": {
+  "Light": "#fefbe9",
+  "Dark": "#1d180f"
+ },
+ "amber/3": {
+  "Light": "#fff7c2",
+  "Dark": "#302008"
+ },
+ "amber/4": {
+  "Light": "#ffee9c",
+  "Dark": "#3f2700"
+ },
+ "amber/5": {
+  "Light": "#fbe577",
+  "Dark": "#4d3000"
+ },
+ "amber/6": {
+  "Light": "#f3d673",
+  "Dark": "#5c3d05"
+ },
+ "amber/7": {
+  "Light": "#e9c162",
+  "Dark": "#714f19"
+ },
+ "amber/8": {
+  "Light": "#e2a336",
+  "Dark": "#8f6424"
+ },
+ "amber/9": {
+  "Light": "#ffc53d",
+  "Dark": "#ffc53d"
+ },
+ "amber/10": {
+  "Light": "#ffba18",
+  "Dark": "#ffd60a"
+ },
+ "amber/11": {
+  "Light": "#ab6400",
+  "Dark": "#ffca16"
+ },
+ "amber/12": {
+  "Light": "#4f3422",
+  "Dark": "#ffe7b3"
+ },
+ "amber/a1": {
+  "Light": "#c0800004",
+  "Dark": "#e63c0006"
+ },
+ "amber/a2": {
+  "Light": "#f4d10016",
+  "Dark": "#fd9b000d"
+ },
+ "amber/a3": {
+  "Light": "#ffde003d",
+  "Dark": "#fa820022"
+ },
+ "amber/a4": {
+  "Light": "#ffd40063",
+  "Dark": "#fc820032"
+ },
+ "amber/a5": {
+  "Light": "#f8cf0088",
+  "Dark": "#fd8b0041"
+ },
+ "amber/a6": {
+  "Light": "#eab5008c",
+  "Dark": "#fd9b0051"
+ },
+ "amber/a7": {
+  "Light": "#dc9b009d",
+  "Dark": "#ffab2567"
+ },
+ "amber/a8": {
+  "Light": "#da8a00c9",
+  "Dark": "#ffae3587"
+ },
+ "amber/a9": {
+  "Light": "#ffb300c2",
+  "Dark": "#ffc53d"
+ },
+ "amber/a10": {
+  "Light": "#ffb300e7",
+  "Dark": "#ffd60a"
+ },
+ "amber/a11": {
+  "Light": "#ab6400",
+  "Dark": "#ffca16"
+ },
+ "amber/a12": {
+  "Light": "#341500dd",
+  "Dark": "#ffe7b3"
+ },
+ "black/a1": {
+  "Light": "rgba(0, 0, 0, 0.05)",
+  "Dark": "rgba(0, 0, 0, 0.05)"
+ },
+ "black/a2": {
+  "Light": "rgba(0, 0, 0, 0.1)",
+  "Dark": "rgba(0, 0, 0, 0.1)"
+ },
+ "black/a3": {
+  "Light": "rgba(0, 0, 0, 0.15)",
+  "Dark": "rgba(0, 0, 0, 0.15)"
+ },
+ "black/a4": {
+  "Light": "rgba(0, 0, 0, 0.2)",
+  "Dark": "rgba(0, 0, 0, 0.2)"
+ },
+ "black/a5": {
+  "Light": "rgba(0, 0, 0, 0.3)",
+  "Dark": "rgba(0, 0, 0, 0.3)"
+ },
+ "black/a6": {
+  "Light": "rgba(0, 0, 0, 0.4)",
+  "Dark": "rgba(0, 0, 0, 0.4)"
+ },
+ "black/a7": {
+  "Light": "rgba(0, 0, 0, 0.5)",
+  "Dark": "rgba(0, 0, 0, 0.5)"
+ },
+ "black/a8": {
+  "Light": "rgba(0, 0, 0, 0.6)",
+  "Dark": "rgba(0, 0, 0, 0.6)"
+ },
+ "black/a9": {
+  "Light": "rgba(0, 0, 0, 0.7)",
+  "Dark": "rgba(0, 0, 0, 0.7)"
+ },
+ "black/a10": {
+  "Light": "rgba(0, 0, 0, 0.8)",
+  "Dark": "rgba(0, 0, 0, 0.8)"
+ },
+ "black/a11": {
+  "Light": "rgba(0, 0, 0, 0.9)",
+  "Dark": "rgba(0, 0, 0, 0.9)"
+ },
+ "black/a12": {
+  "Light": "rgba(0, 0, 0, 0.95)",
+  "Dark": "rgba(0, 0, 0, 0.95)"
+ },
+ "blue/1": {
+  "Light": "#fbfdff",
+  "Dark": "#0d1520"
+ },
+ "blue/2": {
+  "Light": "#f4faff",
+  "Dark": "#111927"
+ },
+ "blue/3": {
+  "Light": "#e6f4fe",
+  "Dark": "#0d2847"
+ },
+ "blue/4": {
+  "Light": "#d5efff",
+  "Dark": "#003362"
+ },
+ "blue/5": {
+  "Light": "#c2e5ff",
+  "Dark": "#004074"
+ },
+ "blue/6": {
+  "Light": "#acd8fc",
+  "Dark": "#104d87"
+ },
+ "blue/7": {
+  "Light": "#8ec8f6",
+  "Dark": "#205d9e"
+ },
+ "blue/8": {
+  "Light": "#5eb1ef",
+  "Dark": "#2870bd"
+ },
+ "blue/9": {
+  "Light": "#0090ff",
+  "Dark": "#0090ff"
+ },
+ "blue/10": {
+  "Light": "#0588f0",
+  "Dark": "#3b9eff"
+ },
+ "blue/11": {
+  "Light": "#0d74ce",
+  "Dark": "#70b8ff"
+ },
+ "blue/12": {
+  "Light": "#113264",
+  "Dark": "#c2e6ff"
+ },
+ "blue/a1": {
+  "Light": "#0080ff04",
+  "Dark": "#004df211"
+ },
+ "blue/a2": {
+  "Light": "#008cff0b",
+  "Dark": "#1166fb18"
+ },
+ "blue/a3": {
+  "Light": "#008ff519",
+  "Dark": "#0077ff3a"
+ },
+ "blue/a4": {
+  "Light": "#009eff2a",
+  "Dark": "#0075ff57"
+ },
+ "blue/a5": {
+  "Light": "#0093ff3d",
+  "Dark": "#0081fd6b"
+ },
+ "blue/a6": {
+  "Light": "#0088f653",
+  "Dark": "#0f89fd7f"
+ },
+ "blue/a7": {
+  "Light": "#0083eb71",
+  "Dark": "#2a91fe98"
+ },
+ "blue/a8": {
+  "Light": "#0084e6a1",
+  "Dark": "#3094feb9"
+ },
+ "blue/a9": {
+  "Light": "#0090ff",
+  "Dark": "#0090ff"
+ },
+ "blue/a10": {
+  "Light": "#0086f0fa",
+  "Dark": "#3b9eff"
+ },
+ "blue/a11": {
+  "Light": "#006dcbf2",
+  "Dark": "#70b8ff"
+ },
+ "blue/a12": {
+  "Light": "#002359ee",
+  "Dark": "#c2e6ff"
+ },
+ "bronze/1": {
+  "Light": "#fdfcfc",
+  "Dark": "#141110"
+ },
+ "bronze/2": {
+  "Light": "#fdf7f5",
+  "Dark": "#1c1917"
+ },
+ "bronze/3": {
+  "Light": "#f6edea",
+  "Dark": "#262220"
+ },
+ "bronze/4": {
+  "Light": "#efe4df",
+  "Dark": "#302a27"
+ },
+ "bronze/5": {
+  "Light": "#e7d9d3",
+  "Dark": "#3b3330"
+ },
+ "bronze/6": {
+  "Light": "#dfcdc5",
+  "Dark": "#493e3a"
+ },
+ "bronze/7": {
+  "Light": "#d3bcb3",
+  "Dark": "#5a4c47"
+ },
+ "bronze/8": {
+  "Light": "#c2a499",
+  "Dark": "#6f5f58"
+ },
+ "bronze/9": {
+  "Light": "#a18072",
+  "Dark": "#a18072"
+ },
+ "bronze/10": {
+  "Light": "#957468",
+  "Dark": "#ae8c7e"
+ },
+ "bronze/11": {
+  "Light": "#7d5e54",
+  "Dark": "#d4b3a5"
+ },
+ "bronze/12": {
+  "Light": "#43302b",
+  "Dark": "#ede0d9"
+ },
+ "bronze/a1": {
+  "Light": "#55000003",
+  "Dark": "#d1110004"
+ },
+ "bronze/a2": {
+  "Light": "#cc33000a",
+  "Dark": "#fbbc910c"
+ },
+ "bronze/a3": {
+  "Light": "#92250015",
+  "Dark": "#faceb817"
+ },
+ "bronze/a4": {
+  "Light": "#80280020",
+  "Dark": "#facdb622"
+ },
+ "bronze/a5": {
+  "Light": "#7423002c",
+  "Dark": "#ffd2c12d"
+ },
+ "bronze/a6": {
+  "Light": "#7324003a",
+  "Dark": "#ffd1c03c"
+ },
+ "bronze/a7": {
+  "Light": "#6c1f004c",
+  "Dark": "#fdd0c04f"
+ },
+ "bronze/a8": {
+  "Light": "#671c0066",
+  "Dark": "#ffd6c565"
+ },
+ "bronze/a9": {
+  "Light": "#551a008d",
+  "Dark": "#fec7b09b"
+ },
+ "bronze/a10": {
+  "Light": "#4c150097",
+  "Dark": "#fecab5a9"
+ },
+ "bronze/a11": {
+  "Light": "#3d0f00ab",
+  "Dark": "#ffd7c6d1"
+ },
+ "bronze/a12": {
+  "Light": "#1d0600d4",
+  "Dark": "#fff1e9ec"
+ },
+ "brown/1": {
+  "Light": "#fefdfc",
+  "Dark": "#12110f"
+ },
+ "brown/2": {
+  "Light": "#fcf9f6",
+  "Dark": "#1c1816"
+ },
+ "brown/3": {
+  "Light": "#f6eee7",
+  "Dark": "#28211d"
+ },
+ "brown/4": {
+  "Light": "#f0e4d9",
+  "Dark": "#322922"
+ },
+ "brown/5": {
+  "Light": "#ebdaca",
+  "Dark": "#3e3128"
+ },
+ "brown/6": {
+  "Light": "#e4cdb7",
+  "Dark": "#4d3c2f"
+ },
+ "brown/7": {
+  "Light": "#dcbc9f",
+  "Dark": "#614a39"
+ },
+ "brown/8": {
+  "Light": "#cea37e",
+  "Dark": "#7c5f46"
+ },
+ "brown/9": {
+  "Light": "#ad7f58",
+  "Dark": "#ad7f58"
+ },
+ "brown/10": {
+  "Light": "#a07553",
+  "Dark": "#b88c67"
+ },
+ "brown/11": {
+  "Light": "#815e46",
+  "Dark": "#dbb594"
+ },
+ "brown/12": {
+  "Light": "#3e332e",
+  "Dark": "#f2e1ca"
+ },
+ "brown/a1": {
+  "Light": "#aa550003",
+  "Dark": "#91110002"
+ },
+ "brown/a2": {
+  "Light": "#aa550009",
+  "Dark": "#fba67c0c"
+ },
+ "brown/a3": {
+  "Light": "#a04b0018",
+  "Dark": "#fcb58c19"
+ },
+ "brown/a4": {
+  "Light": "#9b4a0026",
+  "Dark": "#fbbb8a24"
+ },
+ "brown/a5": {
+  "Light": "#9f4d0035",
+  "Dark": "#fcb88931"
+ },
+ "brown/a6": {
+  "Light": "#a04e0048",
+  "Dark": "#fdba8741"
+ },
+ "brown/a7": {
+  "Light": "#a34e0060",
+  "Dark": "#ffbb8856"
+ },
+ "brown/a8": {
+  "Light": "#9f4a0081",
+  "Dark": "#ffbe8773"
+ },
+ "brown/a9": {
+  "Light": "#823c00a7",
+  "Dark": "#feb87da8"
+ },
+ "brown/a10": {
+  "Light": "#723300ac",
+  "Dark": "#ffc18cb3"
+ },
+ "brown/a11": {
+  "Light": "#522100b9",
+  "Dark": "#fed1aad9"
+ },
+ "brown/a12": {
+  "Light": "#140600d1",
+  "Dark": "#feecd4f2"
+ },
+ "crimson/1": {
+  "Light": "#fffcfd",
+  "Dark": "#191114"
+ },
+ "crimson/2": {
+  "Light": "#fef7f9",
+  "Dark": "#201318"
+ },
+ "crimson/3": {
+  "Light": "#ffe9f0",
+  "Dark": "#381525"
+ },
+ "crimson/4": {
+  "Light": "#fedce7",
+  "Dark": "#4d122f"
+ },
+ "crimson/5": {
+  "Light": "#facedd",
+  "Dark": "#5c1839"
+ },
+ "crimson/6": {
+  "Light": "#f3bed1",
+  "Dark": "#6d2545"
+ },
+ "crimson/7": {
+  "Light": "#eaacc3",
+  "Dark": "#873356"
+ },
+ "crimson/8": {
+  "Light": "#e093b2",
+  "Dark": "#b0436e"
+ },
+ "crimson/9": {
+  "Light": "#e93d82",
+  "Dark": "#e93d82"
+ },
+ "crimson/10": {
+  "Light": "#df3478",
+  "Dark": "#ee518a"
+ },
+ "crimson/11": {
+  "Light": "#cb1d63",
+  "Dark": "#ff92ad"
+ },
+ "crimson/12": {
+  "Light": "#621639",
+  "Dark": "#fdd3e8"
+ },
+ "crimson/a1": {
+  "Light": "#ff005503",
+  "Dark": "#f4126709"
+ },
+ "crimson/a2": {
+  "Light": "#e0004008",
+  "Dark": "#f22f7a11"
+ },
+ "crimson/a3": {
+  "Light": "#ff005216",
+  "Dark": "#fe2a8b2a"
+ },
+ "crimson/a4": {
+  "Light": "#f8005123",
+  "Dark": "#fd158741"
+ },
+ "crimson/a5": {
+  "Light": "#e5004f31",
+  "Dark": "#fd278f51"
+ },
+ "crimson/a6": {
+  "Light": "#d0004b41",
+  "Dark": "#fe459763"
+ },
+ "crimson/a7": {
+  "Light": "#bf004753",
+  "Dark": "#fd559b7f"
+ },
+ "crimson/a8": {
+  "Light": "#b6004a6c",
+  "Dark": "#fe5b9bab"
+ },
+ "crimson/a9": {
+  "Light": "#e2005bc2",
+  "Dark": "#fe418de8"
+ },
+ "crimson/a10": {
+  "Light": "#d70056cb",
+  "Dark": "#ff5693ed"
+ },
+ "crimson/a11": {
+  "Light": "#c4004fe2",
+  "Dark": "#ff92ad"
+ },
+ "crimson/a12": {
+  "Light": "#530026e9",
+  "Dark": "#ffd5eafd"
+ },
+ "cyan/1": {
+  "Light": "#fafdfe",
+  "Dark": "#0b161a"
+ },
+ "cyan/2": {
+  "Light": "#f2fafb",
+  "Dark": "#101b20"
+ },
+ "cyan/3": {
+  "Light": "#def7f9",
+  "Dark": "#082c36"
+ },
+ "cyan/4": {
+  "Light": "#caf1f6",
+  "Dark": "#003848"
+ },
+ "cyan/5": {
+  "Light": "#b5e9f0",
+  "Dark": "#004558"
+ },
+ "cyan/6": {
+  "Light": "#9ddde7",
+  "Dark": "#045468"
+ },
+ "cyan/7": {
+  "Light": "#7dcedc",
+  "Dark": "#12677e"
+ },
+ "cyan/8": {
+  "Light": "#3db9cf",
+  "Dark": "#11809c"
+ },
+ "cyan/9": {
+  "Light": "#00a2c7",
+  "Dark": "#00a2c7"
+ },
+ "cyan/10": {
+  "Light": "#0797b9",
+  "Dark": "#23afd0"
+ },
+ "cyan/11": {
+  "Light": "#107d98",
+  "Dark": "#4ccce6"
+ },
+ "cyan/12": {
+  "Light": "#0d3c48",
+  "Dark": "#b6ecf7"
+ },
+ "cyan/a1": {
+  "Light": "#0099cc05",
+  "Dark": "#0091f70a"
+ },
+ "cyan/a2": {
+  "Light": "#009db10d",
+  "Dark": "#02a7f211"
+ },
+ "cyan/a3": {
+  "Light": "#00c2d121",
+  "Dark": "#00befd28"
+ },
+ "cyan/a4": {
+  "Light": "#00bcd435",
+  "Dark": "#00baff3b"
+ },
+ "cyan/a5": {
+  "Light": "#01b4cc4a",
+  "Dark": "#00befd4d"
+ },
+ "cyan/a6": {
+  "Light": "#00a7c162",
+  "Dark": "#00c7fd5e"
+ },
+ "cyan/a7": {
+  "Light": "#009fbb82",
+  "Dark": "#14cdff75"
+ },
+ "cyan/a8": {
+  "Light": "#00a3c0c2",
+  "Dark": "#11cfff95"
+ },
+ "cyan/a9": {
+  "Light": "#00a2c7",
+  "Dark": "#00cfffc3"
+ },
+ "cyan/a10": {
+  "Light": "#0094b7f8",
+  "Dark": "#28d6ffcd"
+ },
+ "cyan/a11": {
+  "Light": "#007491ef",
+  "Dark": "#52e1fee5"
+ },
+ "cyan/a12": {
+  "Light": "#00323ef2",
+  "Dark": "#bbf3fef7"
+ },
+ "gold/1": {
+  "Light": "#fdfdfc",
+  "Dark": "#121211"
+ },
+ "gold/2": {
+  "Light": "#faf9f2",
+  "Dark": "#1b1a17"
+ },
+ "gold/3": {
+  "Light": "#f2f0e7",
+  "Dark": "#24231f"
+ },
+ "gold/4": {
+  "Light": "#eae6db",
+  "Dark": "#2d2b26"
+ },
+ "gold/5": {
+  "Light": "#e1dccf",
+  "Dark": "#38352e"
+ },
+ "gold/6": {
+  "Light": "#d8d0bf",
+  "Dark": "#444039"
+ },
+ "gold/7": {
+  "Light": "#cbc0aa",
+  "Dark": "#544f46"
+ },
+ "gold/8": {
+  "Light": "#b9a88d",
+  "Dark": "#696256"
+ },
+ "gold/9": {
+  "Light": "#978365",
+  "Dark": "#978365"
+ },
+ "gold/10": {
+  "Light": "#8c7a5e",
+  "Dark": "#a39073"
+ },
+ "gold/11": {
+  "Light": "#71624b",
+  "Dark": "#cbb99f"
+ },
+ "gold/12": {
+  "Light": "#3b352b",
+  "Dark": "#e8e2d9"
+ },
+ "gold/a1": {
+  "Light": "#55550003",
+  "Dark": "#91911102"
+ },
+ "gold/a2": {
+  "Light": "#9d8a000d",
+  "Dark": "#f9e29d0b"
+ },
+ "gold/a3": {
+  "Light": "#75600018",
+  "Dark": "#f8ecbb15"
+ },
+ "gold/a4": {
+  "Light": "#6b4e0024",
+  "Dark": "#ffeec41e"
+ },
+ "gold/a5": {
+  "Light": "#60460030",
+  "Dark": "#feecc22a"
+ },
+ "gold/a6": {
+  "Light": "#64440040",
+  "Dark": "#feebcb37"
+ },
+ "gold/a7": {
+  "Light": "#63420055",
+  "Dark": "#ffedcd48"
+ },
+ "gold/a8": {
+  "Light": "#633d0072",
+  "Dark": "#fdeaca5f"
+ },
+ "gold/a9": {
+  "Light": "#5332009a",
+  "Dark": "#ffdba690"
+ },
+ "gold/a10": {
+  "Light": "#492d00a1",
+  "Dark": "#fedfb09d"
+ },
+ "gold/a11": {
+  "Light": "#362100b4",
+  "Dark": "#fee7c6c8"
+ },
+ "gold/a12": {
+  "Light": "#130c00d4",
+  "Dark": "#fef7ede7"
+ },
+ "grass/1": {
+  "Light": "#fbfefb",
+  "Dark": "#0e1511"
+ },
+ "grass/2": {
+  "Light": "#f5fbf5",
+  "Dark": "#141a15"
+ },
+ "grass/3": {
+  "Light": "#e9f6e9",
+  "Dark": "#1b2a1e"
+ },
+ "grass/4": {
+  "Light": "#daf1db",
+  "Dark": "#1d3a24"
+ },
+ "grass/5": {
+  "Light": "#c9e8ca",
+  "Dark": "#25482d"
+ },
+ "grass/6": {
+  "Light": "#b2ddb5",
+  "Dark": "#2d5736"
+ },
+ "grass/7": {
+  "Light": "#94ce9a",
+  "Dark": "#366740"
+ },
+ "grass/8": {
+  "Light": "#65ba74",
+  "Dark": "#3e7949"
+ },
+ "grass/9": {
+  "Light": "#46a758",
+  "Dark": "#46a758"
+ },
+ "grass/10": {
+  "Light": "#3e9b4f",
+  "Dark": "#53b365"
+ },
+ "grass/11": {
+  "Light": "#2a7e3b",
+  "Dark": "#71d083"
+ },
+ "grass/12": {
+  "Light": "#203c25",
+  "Dark": "#c2f0c2"
+ },
+ "grass/a1": {
+  "Light": "#00c00004",
+  "Dark": "#00de1205"
+ },
+ "grass/a2": {
+  "Light": "#0099000a",
+  "Dark": "#5ef7780a"
+ },
+ "grass/a3": {
+  "Light": "#00970016",
+  "Dark": "#70fe8c1b"
+ },
+ "grass/a4": {
+  "Light": "#009f0725",
+  "Dark": "#57ff802c"
+ },
+ "grass/a5": {
+  "Light": "#00930536",
+  "Dark": "#68ff8b3b"
+ },
+ "grass/a6": {
+  "Light": "#008f0a4d",
+  "Dark": "#71ff8f4b"
+ },
+ "grass/a7": {
+  "Light": "#018b0f6b",
+  "Dark": "#77fd925d"
+ },
+ "grass/a8": {
+  "Light": "#008d199a",
+  "Dark": "#77fd9070"
+ },
+ "grass/a9": {
+  "Light": "#008619b9",
+  "Dark": "#65ff82a1"
+ },
+ "grass/a10": {
+  "Light": "#007b17c1",
+  "Dark": "#72ff8dae"
+ },
+ "grass/a11": {
+  "Light": "#006514d5",
+  "Dark": "#89ff9fcd"
+ },
+ "grass/a12": {
+  "Light": "#002006df",
+  "Dark": "#ceffceef"
+ },
+ "gray/1": {
+  "Light": "#fcfcfc",
+  "Dark": "#111111"
+ },
+ "gray/2": {
+  "Light": "#f9f9f9",
+  "Dark": "#191919"
+ },
+ "gray/3": {
+  "Light": "#f0f0f0",
+  "Dark": "#222222"
+ },
+ "gray/4": {
+  "Light": "#e8e8e8",
+  "Dark": "#2a2a2a"
+ },
+ "gray/5": {
+  "Light": "#e0e0e0",
+  "Dark": "#313131"
+ },
+ "gray/6": {
+  "Light": "#d9d9d9",
+  "Dark": "#3a3a3a"
+ },
+ "gray/7": {
+  "Light": "#cecece",
+  "Dark": "#484848"
+ },
+ "gray/8": {
+  "Light": "#bbbbbb",
+  "Dark": "#606060"
+ },
+ "gray/9": {
+  "Light": "#8d8d8d",
+  "Dark": "#6e6e6e"
+ },
+ "gray/10": {
+  "Light": "#838383",
+  "Dark": "#7b7b7b"
+ },
+ "gray/11": {
+  "Light": "#646464",
+  "Dark": "#b4b4b4"
+ },
+ "gray/12": {
+  "Light": "#202020",
+  "Dark": "#eeeeee"
+ },
+ "gray/a1": {
+  "Light": "#00000003",
+  "Dark": "#00000000"
+ },
+ "gray/a2": {
+  "Light": "#00000006",
+  "Dark": "#ffffff09"
+ },
+ "gray/a3": {
+  "Light": "#0000000f",
+  "Dark": "#ffffff12"
+ },
+ "gray/a4": {
+  "Light": "#00000017",
+  "Dark": "#ffffff1b"
+ },
+ "gray/a5": {
+  "Light": "#0000001f",
+  "Dark": "#ffffff22"
+ },
+ "gray/a6": {
+  "Light": "#00000026",
+  "Dark": "#ffffff2c"
+ },
+ "gray/a7": {
+  "Light": "#00000031",
+  "Dark": "#ffffff3b"
+ },
+ "gray/a8": {
+  "Light": "#00000044",
+  "Dark": "#ffffff55"
+ },
+ "gray/a9": {
+  "Light": "#00000072",
+  "Dark": "#ffffff64"
+ },
+ "gray/a10": {
+  "Light": "#0000007c",
+  "Dark": "#ffffff72"
+ },
+ "gray/a11": {
+  "Light": "#0000009b",
+  "Dark": "#ffffffaf"
+ },
+ "gray/a12": {
+  "Light": "#000000df",
+  "Dark": "#ffffffed"
+ },
+ "green/1": {
+  "Light": "#fbfefc",
+  "Dark": "#0e1512"
+ },
+ "green/2": {
+  "Light": "#f4fbf6",
+  "Dark": "#121b17"
+ },
+ "green/3": {
+  "Light": "#e6f6eb",
+  "Dark": "#132d21"
+ },
+ "green/4": {
+  "Light": "#d6f1df",
+  "Dark": "#113b29"
+ },
+ "green/5": {
+  "Light": "#c4e8d1",
+  "Dark": "#174933"
+ },
+ "green/6": {
+  "Light": "#adddc0",
+  "Dark": "#20573e"
+ },
+ "green/7": {
+  "Light": "#8eceaa",
+  "Dark": "#28684a"
+ },
+ "green/8": {
+  "Light": "#5bb98b",
+  "Dark": "#2f7c57"
+ },
+ "green/9": {
+  "Light": "#30a46c",
+  "Dark": "#30a46c"
+ },
+ "green/10": {
+  "Light": "#2b9a66",
+  "Dark": "#33b074"
+ },
+ "green/11": {
+  "Light": "#218358",
+  "Dark": "#3dd68c"
+ },
+ "green/12": {
+  "Light": "#193b2d",
+  "Dark": "#b1f1cb"
+ },
+ "green/a1": {
+  "Light": "#00c04004",
+  "Dark": "#00de4505"
+ },
+ "green/a2": {
+  "Light": "#00a32f0b",
+  "Dark": "#29f99d0b"
+ },
+ "green/a3": {
+  "Light": "#00a43319",
+  "Dark": "#22ff991e"
+ },
+ "green/a4": {
+  "Light": "#00a83829",
+  "Dark": "#11ff992d"
+ },
+ "green/a5": {
+  "Light": "#019c393b",
+  "Dark": "#2bffa23c"
+ },
+ "green/a6": {
+  "Light": "#00963c52",
+  "Dark": "#44ffaa4b"
+ },
+ "green/a7": {
+  "Light": "#00914071",
+  "Dark": "#50fdac5e"
+ },
+ "green/a8": {
+  "Light": "#00924ba4",
+  "Dark": "#54ffad73"
+ },
+ "green/a9": {
+  "Light": "#008f4acf",
+  "Dark": "#44ffa49e"
+ },
+ "green/a10": {
+  "Light": "#008647d4",
+  "Dark": "#43fea4ab"
+ },
+ "green/a11": {
+  "Light": "#00713fde",
+  "Dark": "#46fea5d4"
+ },
+ "green/a12": {
+  "Light": "#002616e6",
+  "Dark": "#bbffd7f0"
+ },
+ "indigo/1": {
+  "Light": "#fdfdfe",
+  "Dark": "#11131f"
+ },
+ "indigo/2": {
+  "Light": "#f7f9ff",
+  "Dark": "#141726"
+ },
+ "indigo/3": {
+  "Light": "#edf2fe",
+  "Dark": "#182449"
+ },
+ "indigo/4": {
+  "Light": "#e1e9ff",
+  "Dark": "#1d2e62"
+ },
+ "indigo/5": {
+  "Light": "#d2deff",
+  "Dark": "#253974"
+ },
+ "indigo/6": {
+  "Light": "#c1d0ff",
+  "Dark": "#304384"
+ },
+ "indigo/7": {
+  "Light": "#abbdf9",
+  "Dark": "#3a4f97"
+ },
+ "indigo/8": {
+  "Light": "#8da4ef",
+  "Dark": "#435db1"
+ },
+ "indigo/9": {
+  "Light": "#3e63dd",
+  "Dark": "#3e63dd"
+ },
+ "indigo/10": {
+  "Light": "#3358d4",
+  "Dark": "#5472e4"
+ },
+ "indigo/11": {
+  "Light": "#3a5bc7",
+  "Dark": "#9eb1ff"
+ },
+ "indigo/12": {
+  "Light": "#1f2d5c",
+  "Dark": "#d6e1ff"
+ },
+ "indigo/a1": {
+  "Light": "#00008002",
+  "Dark": "#1133ff0f"
+ },
+ "indigo/a2": {
+  "Light": "#0040ff08",
+  "Dark": "#3354fa17"
+ },
+ "indigo/a3": {
+  "Light": "#0047f112",
+  "Dark": "#2f62ff3c"
+ },
+ "indigo/a4": {
+  "Light": "#0044ff1e",
+  "Dark": "#3566ff57"
+ },
+ "indigo/a5": {
+  "Light": "#0044ff2d",
+  "Dark": "#4171fd6b"
+ },
+ "indigo/a6": {
+  "Light": "#003eff3e",
+  "Dark": "#5178fd7c"
+ },
+ "indigo/a7": {
+  "Light": "#0037ed54",
+  "Dark": "#5a7fff90"
+ },
+ "indigo/a8": {
+  "Light": "#0034dc72",
+  "Dark": "#5b81feac"
+ },
+ "indigo/a9": {
+  "Light": "#0031d2c1",
+  "Dark": "#4671ffdb"
+ },
+ "indigo/a10": {
+  "Light": "#002ec9cc",
+  "Dark": "#5c7efee3"
+ },
+ "indigo/a11": {
+  "Light": "#002bb7c5",
+  "Dark": "#9eb1ff"
+ },
+ "indigo/a12": {
+  "Light": "#001046e0",
+  "Dark": "#d6e1ff"
+ },
+ "iris/1": {
+  "Light": "#fdfdff",
+  "Dark": "#13131e"
+ },
+ "iris/2": {
+  "Light": "#f8f8ff",
+  "Dark": "#171625"
+ },
+ "iris/3": {
+  "Light": "#f0f1fe",
+  "Dark": "#202248"
+ },
+ "iris/4": {
+  "Light": "#e6e7ff",
+  "Dark": "#262a65"
+ },
+ "iris/5": {
+  "Light": "#dadcff",
+  "Dark": "#303374"
+ },
+ "iris/6": {
+  "Light": "#cbcdff",
+  "Dark": "#3d3e82"
+ },
+ "iris/7": {
+  "Light": "#b8baf8",
+  "Dark": "#4a4a95"
+ },
+ "iris/8": {
+  "Light": "#9b9ef0",
+  "Dark": "#5958b1"
+ },
+ "iris/9": {
+  "Light": "#5b5bd6",
+  "Dark": "#5b5bd6"
+ },
+ "iris/10": {
+  "Light": "#5151cd",
+  "Dark": "#6e6ade"
+ },
+ "iris/11": {
+  "Light": "#5753c6",
+  "Dark": "#b1a9ff"
+ },
+ "iris/12": {
+  "Light": "#272962",
+  "Dark": "#e0dffe"
+ },
+ "iris/a1": {
+  "Light": "#0000ff02",
+  "Dark": "#3636fe0e"
+ },
+ "iris/a2": {
+  "Light": "#0000ff07",
+  "Dark": "#564bf916"
+ },
+ "iris/a3": {
+  "Light": "#0011ee0f",
+  "Dark": "#525bff3b"
+ },
+ "iris/a4": {
+  "Light": "#000bff19",
+  "Dark": "#4d58ff5a"
+ },
+ "iris/a5": {
+  "Light": "#000eff25",
+  "Dark": "#5b62fd6b"
+ },
+ "iris/a6": {
+  "Light": "#000aff34",
+  "Dark": "#6d6ffd7a"
+ },
+ "iris/a7": {
+  "Light": "#0008e647",
+  "Dark": "#7777fe8e"
+ },
+ "iris/a8": {
+  "Light": "#0008d964",
+  "Dark": "#7b7afeac"
+ },
+ "iris/a9": {
+  "Light": "#0000c0a4",
+  "Dark": "#6a6afed4"
+ },
+ "iris/a10": {
+  "Light": "#0000b6ae",
+  "Dark": "#7d79ffdc"
+ },
+ "iris/a11": {
+  "Light": "#0600abac",
+  "Dark": "#b1a9ff"
+ },
+ "iris/a12": {
+  "Light": "#000246d8",
+  "Dark": "#e1e0fffe"
+ },
+ "jade/1": {
+  "Light": "#fbfefd",
+  "Dark": "#0d1512"
+ },
+ "jade/2": {
+  "Light": "#f4fbf7",
+  "Dark": "#121c18"
+ },
+ "jade/3": {
+  "Light": "#e6f7ed",
+  "Dark": "#0f2e22"
+ },
+ "jade/4": {
+  "Light": "#d6f1e3",
+  "Dark": "#0b3b2c"
+ },
+ "jade/5": {
+  "Light": "#c3e9d7",
+  "Dark": "#114837"
+ },
+ "jade/6": {
+  "Light": "#acdec8",
+  "Dark": "#1b5745"
+ },
+ "jade/7": {
+  "Light": "#8bceb6",
+  "Dark": "#246854"
+ },
+ "jade/8": {
+  "Light": "#56ba9f",
+  "Dark": "#2a7e68"
+ },
+ "jade/9": {
+  "Light": "#29a383",
+  "Dark": "#29a383"
+ },
+ "jade/10": {
+  "Light": "#26997b",
+  "Dark": "#27b08b"
+ },
+ "jade/11": {
+  "Light": "#208368",
+  "Dark": "#1fd8a4"
+ },
+ "jade/12": {
+  "Light": "#1d3b31",
+  "Dark": "#adf0d4"
+ },
+ "jade/a1": {
+  "Light": "#00c08004",
+  "Dark": "#00de4505"
+ },
+ "jade/a2": {
+  "Light": "#00a3460b",
+  "Dark": "#27fba60c"
+ },
+ "jade/a3": {
+  "Light": "#00ae4819",
+  "Dark": "#02f99920"
+ },
+ "jade/a4": {
+  "Light": "#00a85129",
+  "Dark": "#00ffaa2d"
+ },
+ "jade/a5": {
+  "Light": "#00a2553c",
+  "Dark": "#11ffb63b"
+ },
+ "jade/a6": {
+  "Light": "#009a5753",
+  "Dark": "#34ffc24b"
+ },
+ "jade/a7": {
+  "Light": "#00945f74",
+  "Dark": "#45fdc75e"
+ },
+ "jade/a8": {
+  "Light": "#00976ea9",
+  "Dark": "#48ffcf75"
+ },
+ "jade/a9": {
+  "Light": "#00916bd6",
+  "Dark": "#38feca9d"
+ },
+ "jade/a10": {
+  "Light": "#008764d9",
+  "Dark": "#31fec7ab"
+ },
+ "jade/a11": {
+  "Light": "#007152df",
+  "Dark": "#21fec0d6"
+ },
+ "jade/a12": {
+  "Light": "#002217e2",
+  "Dark": "#b8ffe1ef"
+ },
+ "lime/1": {
+  "Light": "#fcfdfa",
+  "Dark": "#11130c"
+ },
+ "lime/2": {
+  "Light": "#f8faf3",
+  "Dark": "#151a10"
+ },
+ "lime/3": {
+  "Light": "#eef6d6",
+  "Dark": "#1f2917"
+ },
+ "lime/4": {
+  "Light": "#e2f0bd",
+  "Dark": "#29371d"
+ },
+ "lime/5": {
+  "Light": "#d3e7a6",
+  "Dark": "#334423"
+ },
+ "lime/6": {
+  "Light": "#c2da91",
+  "Dark": "#3d522a"
+ },
+ "lime/7": {
+  "Light": "#abc978",
+  "Dark": "#496231"
+ },
+ "lime/8": {
+  "Light": "#8db654",
+  "Dark": "#577538"
+ },
+ "lime/9": {
+  "Light": "#bdee63",
+  "Dark": "#bdee63"
+ },
+ "lime/10": {
+  "Light": "#b0e64c",
+  "Dark": "#d4ff70"
+ },
+ "lime/11": {
+  "Light": "#5c7c2f",
+  "Dark": "#bde56c"
+ },
+ "lime/12": {
+  "Light": "#37401c",
+  "Dark": "#e3f7ba"
+ },
+ "lime/a1": {
+  "Light": "#66990005",
+  "Dark": "#11bb0003"
+ },
+ "lime/a2": {
+  "Light": "#6b95000c",
+  "Dark": "#78f7000a"
+ },
+ "lime/a3": {
+  "Light": "#96c80029",
+  "Dark": "#9bfd4c1a"
+ },
+ "lime/a4": {
+  "Light": "#8fc60042",
+  "Dark": "#a7fe5c29"
+ },
+ "lime/a5": {
+  "Light": "#81bb0059",
+  "Dark": "#affe6537"
+ },
+ "lime/a6": {
+  "Light": "#72aa006e",
+  "Dark": "#b2fe6d46"
+ },
+ "lime/a7": {
+  "Light": "#61990087",
+  "Dark": "#b6ff6f57"
+ },
+ "lime/a8": {
+  "Light": "#559200ab",
+  "Dark": "#b6fd6d6c"
+ },
+ "lime/a9": {
+  "Light": "#93e4009c",
+  "Dark": "#caff69ed"
+ },
+ "lime/a10": {
+  "Light": "#8fdc00b3",
+  "Dark": "#d4ff70"
+ },
+ "lime/a11": {
+  "Light": "#375f00d0",
+  "Dark": "#d1fe77e4"
+ },
+ "lime/a12": {
+  "Light": "#1e2900e3",
+  "Dark": "#e9febff7"
+ },
+ "mauve/1": {
+  "Light": "#fdfcfd",
+  "Dark": "#121113"
+ },
+ "mauve/2": {
+  "Light": "#faf9fb",
+  "Dark": "#1a191b"
+ },
+ "mauve/3": {
+  "Light": "#f2eff3",
+  "Dark": "#232225"
+ },
+ "mauve/4": {
+  "Light": "#eae7ec",
+  "Dark": "#2b292d"
+ },
+ "mauve/5": {
+  "Light": "#e3dfe6",
+  "Dark": "#323035"
+ },
+ "mauve/6": {
+  "Light": "#dbd8e0",
+  "Dark": "#3c393f"
+ },
+ "mauve/7": {
+  "Light": "#d0cdd7",
+  "Dark": "#49474e"
+ },
+ "mauve/8": {
+  "Light": "#bcbac7",
+  "Dark": "#625f69"
+ },
+ "mauve/9": {
+  "Light": "#8e8c99",
+  "Dark": "#6f6d78"
+ },
+ "mauve/10": {
+  "Light": "#84828e",
+  "Dark": "#7c7a85"
+ },
+ "mauve/11": {
+  "Light": "#65636d",
+  "Dark": "#b5b2bc"
+ },
+ "mauve/12": {
+  "Light": "#211f26",
+  "Dark": "#eeeef0"
+ },
+ "mauve/a1": {
+  "Light": "#55005503",
+  "Dark": "#00000000"
+ },
+ "mauve/a2": {
+  "Light": "#2b005506",
+  "Dark": "#f5f4f609"
+ },
+ "mauve/a3": {
+  "Light": "#30004010",
+  "Dark": "#ebeaf814"
+ },
+ "mauve/a4": {
+  "Light": "#20003618",
+  "Dark": "#eee5f81d"
+ },
+ "mauve/a5": {
+  "Light": "#20003820",
+  "Dark": "#efe6fe25"
+ },
+ "mauve/a6": {
+  "Light": "#14003527",
+  "Dark": "#f1e6fd30"
+ },
+ "mauve/a7": {
+  "Light": "#10003332",
+  "Dark": "#eee9ff40"
+ },
+ "mauve/a8": {
+  "Light": "#08003145",
+  "Dark": "#eee7ff5d"
+ },
+ "mauve/a9": {
+  "Light": "#05001d73",
+  "Dark": "#eae6fd6e"
+ },
+ "mauve/a10": {
+  "Light": "#0500197d",
+  "Dark": "#ece9fd7c"
+ },
+ "mauve/a11": {
+  "Light": "#0400119c",
+  "Dark": "#f5f1ffb7"
+ },
+ "mauve/a12": {
+  "Light": "#020008e0",
+  "Dark": "#fdfdffef"
+ },
+ "mint/1": {
+  "Light": "#f9fefd",
+  "Dark": "#0e1515"
+ },
+ "mint/2": {
+  "Light": "#f2fbf9",
+  "Dark": "#0f1b1b"
+ },
+ "mint/3": {
+  "Light": "#ddf9f2",
+  "Dark": "#092c2b"
+ },
+ "mint/4": {
+  "Light": "#c8f4e9",
+  "Dark": "#003a38"
+ },
+ "mint/5": {
+  "Light": "#b3ecde",
+  "Dark": "#004744"
+ },
+ "mint/6": {
+  "Light": "#9ce0d0",
+  "Dark": "#105650"
+ },
+ "mint/7": {
+  "Light": "#7ecfbd",
+  "Dark": "#1e685f"
+ },
+ "mint/8": {
+  "Light": "#4cbba5",
+  "Dark": "#277f70"
+ },
+ "mint/9": {
+  "Light": "#86ead4",
+  "Dark": "#86ead4"
+ },
+ "mint/10": {
+  "Light": "#7de0cb",
+  "Dark": "#a8f5e5"
+ },
+ "mint/11": {
+  "Light": "#027864",
+  "Dark": "#58d5ba"
+ },
+ "mint/12": {
+  "Light": "#16433c",
+  "Dark": "#c4f5e1"
+ },
+ "mint/a1": {
+  "Light": "#00d5aa06",
+  "Dark": "#00dede05"
+ },
+ "mint/a2": {
+  "Light": "#00b18a0d",
+  "Dark": "#00f9f90b"
+ },
+ "mint/a3": {
+  "Light": "#00d29e22",
+  "Dark": "#00fff61d"
+ },
+ "mint/a4": {
+  "Light": "#00cc9937",
+  "Dark": "#00fff42c"
+ },
+ "mint/a5": {
+  "Light": "#00c0914c",
+  "Dark": "#00fff23a"
+ },
+ "mint/a6": {
+  "Light": "#00b08663",
+  "Dark": "#0effeb4a"
+ },
+ "mint/a7": {
+  "Light": "#00a17d81",
+  "Dark": "#34fde55e"
+ },
+ "mint/a8": {
+  "Light": "#009e7fb3",
+  "Dark": "#41ffdf76"
+ },
+ "mint/a9": {
+  "Light": "#00d3a579",
+  "Dark": "#92ffe7e9"
+ },
+ "mint/a10": {
+  "Light": "#00c39982",
+  "Dark": "#aefeedf5"
+ },
+ "mint/a11": {
+  "Light": "#007763fd",
+  "Dark": "#67ffded2"
+ },
+ "mint/a12": {
+  "Light": "#00312ae9",
+  "Dark": "#cbfee9f5"
+ },
+ "olive/1": {
+  "Light": "#fcfdfc",
+  "Dark": "#111210"
+ },
+ "olive/2": {
+  "Light": "#f8faf8",
+  "Dark": "#181917"
+ },
+ "olive/3": {
+  "Light": "#eff1ef",
+  "Dark": "#212220"
+ },
+ "olive/4": {
+  "Light": "#e7e9e7",
+  "Dark": "#282a27"
+ },
+ "olive/5": {
+  "Light": "#dfe2df",
+  "Dark": "#2f312e"
+ },
+ "olive/6": {
+  "Light": "#d7dad7",
+  "Dark": "#383a36"
+ },
+ "olive/7": {
+  "Light": "#cccfcc",
+  "Dark": "#454843"
+ },
+ "olive/8": {
+  "Light": "#b9bcb8",
+  "Dark": "#5c625b"
+ },
+ "olive/9": {
+  "Light": "#898e87",
+  "Dark": "#687066"
+ },
+ "olive/10": {
+  "Light": "#7f847d",
+  "Dark": "#767d74"
+ },
+ "olive/11": {
+  "Light": "#60655f",
+  "Dark": "#afb5ad"
+ },
+ "olive/12": {
+  "Light": "#1d211c",
+  "Dark": "#eceeec"
+ },
+ "olive/a1": {
+  "Light": "#00550003",
+  "Dark": "#00000000"
+ },
+ "olive/a2": {
+  "Light": "#00490007",
+  "Dark": "#f1f2f008"
+ },
+ "olive/a3": {
+  "Light": "#00200010",
+  "Dark": "#f4f5f312"
+ },
+ "olive/a4": {
+  "Light": "#00160018",
+  "Dark": "#f3fef21a"
+ },
+ "olive/a5": {
+  "Light": "#00180020",
+  "Dark": "#f2fbf122"
+ },
+ "olive/a6": {
+  "Light": "#00140028",
+  "Dark": "#f4faed2c"
+ },
+ "olive/a7": {
+  "Light": "#000f0033",
+  "Dark": "#f2fced3b"
+ },
+ "olive/a8": {
+  "Light": "#040f0047",
+  "Dark": "#edfdeb57"
+ },
+ "olive/a9": {
+  "Light": "#050f0078",
+  "Dark": "#ebfde766"
+ },
+ "olive/a10": {
+  "Light": "#040e0082",
+  "Dark": "#f0fdec74"
+ },
+ "olive/a11": {
+  "Light": "#020a00a0",
+  "Dark": "#f6fef4b0"
+ },
+ "olive/a12": {
+  "Light": "#010600e3",
+  "Dark": "#fdfffded"
+ },
+ "orange/1": {
+  "Light": "#fefcfb",
+  "Dark": "#17120e"
+ },
+ "orange/2": {
+  "Light": "#fff7ed",
+  "Dark": "#1e160f"
+ },
+ "orange/3": {
+  "Light": "#ffefd6",
+  "Dark": "#331e0b"
+ },
+ "orange/4": {
+  "Light": "#ffdfb5",
+  "Dark": "#462100"
+ },
+ "orange/5": {
+  "Light": "#ffd19a",
+  "Dark": "#562800"
+ },
+ "orange/6": {
+  "Light": "#ffc182",
+  "Dark": "#66350c"
+ },
+ "orange/7": {
+  "Light": "#f5ae73",
+  "Dark": "#7e451d"
+ },
+ "orange/8": {
+  "Light": "#ec9455",
+  "Dark": "#a35829"
+ },
+ "orange/9": {
+  "Light": "#f76b15",
+  "Dark": "#f76b15"
+ },
+ "orange/10": {
+  "Light": "#ef5f00",
+  "Dark": "#ff801f"
+ },
+ "orange/11": {
+  "Light": "#cc4e00",
+  "Dark": "#ffa057"
+ },
+ "orange/12": {
+  "Light": "#582d1d",
+  "Dark": "#ffe0c2"
+ },
+ "orange/a1": {
+  "Light": "#c0400004",
+  "Dark": "#ec360007"
+ },
+ "orange/a2": {
+  "Light": "#ff8e0012",
+  "Dark": "#fe6d000e"
+ },
+ "orange/a3": {
+  "Light": "#ff9c0029",
+  "Dark": "#fb6a0025"
+ },
+ "orange/a4": {
+  "Light": "#ff91014a",
+  "Dark": "#ff590039"
+ },
+ "orange/a5": {
+  "Light": "#ff8b0065",
+  "Dark": "#ff61004a"
+ },
+ "orange/a6": {
+  "Light": "#ff81007d",
+  "Dark": "#fd75045c"
+ },
+ "orange/a7": {
+  "Light": "#ed6c008c",
+  "Dark": "#ff832c75"
+ },
+ "orange/a8": {
+  "Light": "#e35f00aa",
+  "Dark": "#fe84389d"
+ },
+ "orange/a9": {
+  "Light": "#f65e00ea",
+  "Dark": "#fe6d15f7"
+ },
+ "orange/a10": {
+  "Light": "#ef5f00",
+  "Dark": "#ff801f"
+ },
+ "orange/a11": {
+  "Light": "#cc4e00",
+  "Dark": "#ffa057"
+ },
+ "orange/a12": {
+  "Light": "#431200e2",
+  "Dark": "#ffe0c2"
+ },
+ "pink/1": {
+  "Light": "#fffcfe",
+  "Dark": "#191117"
+ },
+ "pink/2": {
+  "Light": "#fef7fb",
+  "Dark": "#21121d"
+ },
+ "pink/3": {
+  "Light": "#fee9f5",
+  "Dark": "#37172f"
+ },
+ "pink/4": {
+  "Light": "#fbdcef",
+  "Dark": "#4b143d"
+ },
+ "pink/5": {
+  "Light": "#f6cee7",
+  "Dark": "#591c47"
+ },
+ "pink/6": {
+  "Light": "#efbfdd",
+  "Dark": "#692955"
+ },
+ "pink/7": {
+  "Light": "#e7acd0",
+  "Dark": "#833869"
+ },
+ "pink/8": {
+  "Light": "#dd93c2",
+  "Dark": "#a84885"
+ },
+ "pink/9": {
+  "Light": "#d6409f",
+  "Dark": "#d6409f"
+ },
+ "pink/10": {
+  "Light": "#cf3897",
+  "Dark": "#de51a8"
+ },
+ "pink/11": {
+  "Light": "#c2298a",
+  "Dark": "#ff8dcc"
+ },
+ "pink/12": {
+  "Light": "#651249",
+  "Dark": "#fdd1ea"
+ },
+ "pink/a1": {
+  "Light": "#ff00aa03",
+  "Dark": "#f412bc09"
+ },
+ "pink/a2": {
+  "Light": "#e0008008",
+  "Dark": "#f420bb12"
+ },
+ "pink/a3": {
+  "Light": "#f4008c16",
+  "Dark": "#fe37cc29"
+ },
+ "pink/a4": {
+  "Light": "#e2008b23",
+  "Dark": "#fc1ec43f"
+ },
+ "pink/a5": {
+  "Light": "#d1008331",
+  "Dark": "#fd35c24e"
+ },
+ "pink/a6": {
+  "Light": "#c0007840",
+  "Dark": "#fd51c75f"
+ },
+ "pink/a7": {
+  "Light": "#b6006f53",
+  "Dark": "#fd62c87b"
+ },
+ "pink/a8": {
+  "Light": "#af006f6c",
+  "Dark": "#ff68c8a2"
+ },
+ "pink/a9": {
+  "Light": "#c8007fbf",
+  "Dark": "#fe49bcd4"
+ },
+ "pink/a10": {
+  "Light": "#c2007ac7",
+  "Dark": "#ff5cc0dc"
+ },
+ "pink/a11": {
+  "Light": "#b60074d6",
+  "Dark": "#ff8dcc"
+ },
+ "pink/a12": {
+  "Light": "#59003bed",
+  "Dark": "#ffd3ecfd"
+ },
+ "plum/1": {
+  "Light": "#fefcff",
+  "Dark": "#181118"
+ },
+ "plum/2": {
+  "Light": "#fdf7fd",
+  "Dark": "#201320"
+ },
+ "plum/3": {
+  "Light": "#fbebfb",
+  "Dark": "#351a35"
+ },
+ "plum/4": {
+  "Light": "#f7def8",
+  "Dark": "#451d47"
+ },
+ "plum/5": {
+  "Light": "#f2d1f3",
+  "Dark": "#512454"
+ },
+ "plum/6": {
+  "Light": "#e9c2ec",
+  "Dark": "#5e3061"
+ },
+ "plum/7": {
+  "Light": "#deade3",
+  "Dark": "#734079"
+ },
+ "plum/8": {
+  "Light": "#cf91d8",
+  "Dark": "#92549c"
+ },
+ "plum/9": {
+  "Light": "#ab4aba",
+  "Dark": "#ab4aba"
+ },
+ "plum/10": {
+  "Light": "#a144af",
+  "Dark": "#b658c4"
+ },
+ "plum/11": {
+  "Light": "#953ea3",
+  "Dark": "#e796f3"
+ },
+ "plum/12": {
+  "Light": "#53195d",
+  "Dark": "#f4d4f4"
+ },
+ "plum/a1": {
+  "Light": "#aa00ff03",
+  "Dark": "#f112f108"
+ },
+ "plum/a2": {
+  "Light": "#c000c008",
+  "Dark": "#f22ff211"
+ },
+ "plum/a3": {
+  "Light": "#cc00cc14",
+  "Dark": "#fd4cfd27"
+ },
+ "plum/a4": {
+  "Light": "#c200c921",
+  "Dark": "#f646ff3a"
+ },
+ "plum/a5": {
+  "Light": "#b700bd2e",
+  "Dark": "#f455ff48"
+ },
+ "plum/a6": {
+  "Light": "#a400b03d",
+  "Dark": "#f66dff56"
+ },
+ "plum/a7": {
+  "Light": "#9900a852",
+  "Dark": "#f07cfd70"
+ },
+ "plum/a8": {
+  "Light": "#9000a56e",
+  "Dark": "#ee84ff95"
+ },
+ "plum/a9": {
+  "Light": "#89009eb5",
+  "Dark": "#e961feb6"
+ },
+ "plum/a10": {
+  "Light": "#7f0092bb",
+  "Dark": "#ed70ffc0"
+ },
+ "plum/a11": {
+  "Light": "#730086c1",
+  "Dark": "#f19cfef3"
+ },
+ "plum/a12": {
+  "Light": "#40004be6",
+  "Dark": "#feddfef4"
+ },
+ "purple/1": {
+  "Light": "#fefcfe",
+  "Dark": "#18111b"
+ },
+ "purple/2": {
+  "Light": "#fbf7fe",
+  "Dark": "#1e1523"
+ },
+ "purple/3": {
+  "Light": "#f7edfe",
+  "Dark": "#301c3b"
+ },
+ "purple/4": {
+  "Light": "#f2e2fc",
+  "Dark": "#3d224e"
+ },
+ "purple/5": {
+  "Light": "#ead5f9",
+  "Dark": "#48295c"
+ },
+ "purple/6": {
+  "Light": "#e0c4f4",
+  "Dark": "#54346b"
+ },
+ "purple/7": {
+  "Light": "#d1afec",
+  "Dark": "#664282"
+ },
+ "purple/8": {
+  "Light": "#be93e4",
+  "Dark": "#8457aa"
+ },
+ "purple/9": {
+  "Light": "#8e4ec6",
+  "Dark": "#8e4ec6"
+ },
+ "purple/10": {
+  "Light": "#8347b9",
+  "Dark": "#9a5cd0"
+ },
+ "purple/11": {
+  "Light": "#8145b5",
+  "Dark": "#d19dff"
+ },
+ "purple/12": {
+  "Light": "#402060",
+  "Dark": "#ecd9fa"
+ },
+ "purple/a1": {
+  "Light": "#aa00aa03",
+  "Dark": "#b412f90b"
+ },
+ "purple/a2": {
+  "Light": "#8000e008",
+  "Dark": "#b744f714"
+ },
+ "purple/a3": {
+  "Light": "#8e00f112",
+  "Dark": "#c150ff2d"
+ },
+ "purple/a4": {
+  "Light": "#8d00e51d",
+  "Dark": "#bb53fd42"
+ },
+ "purple/a5": {
+  "Light": "#8000db2a",
+  "Dark": "#be5cfd51"
+ },
+ "purple/a6": {
+  "Light": "#7a01d03b",
+  "Dark": "#c16dfd61"
+ },
+ "purple/a7": {
+  "Light": "#6d00c350",
+  "Dark": "#c378fd7a"
+ },
+ "purple/a8": {
+  "Light": "#6600c06c",
+  "Dark": "#c47effa4"
+ },
+ "purple/a9": {
+  "Light": "#5c00adb1",
+  "Dark": "#b661ffc2"
+ },
+ "purple/a10": {
+  "Light": "#53009eb8",
+  "Dark": "#bc6fffcd"
+ },
+ "purple/a11": {
+  "Light": "#52009aba",
+  "Dark": "#d19dff"
+ },
+ "purple/a12": {
+  "Light": "#250049df",
+  "Dark": "#f1ddfffa"
+ },
+ "red/1": {
+  "Light": "#fffcfc",
+  "Dark": "#191111"
+ },
+ "red/2": {
+  "Light": "#fff7f7",
+  "Dark": "#201314"
+ },
+ "red/3": {
+  "Light": "#feebec",
+  "Dark": "#3b1219"
+ },
+ "red/4": {
+  "Light": "#ffdbdc",
+  "Dark": "#500f1c"
+ },
+ "red/5": {
+  "Light": "#ffcdce",
+  "Dark": "#611623"
+ },
+ "red/6": {
+  "Light": "#fdbdbe",
+  "Dark": "#72232d"
+ },
+ "red/7": {
+  "Light": "#f4a9aa",
+  "Dark": "#8c333a"
+ },
+ "red/8": {
+  "Light": "#eb8e90",
+  "Dark": "#b54548"
+ },
+ "red/9": {
+  "Light": "#e5484d",
+  "Dark": "#e5484d"
+ },
+ "red/10": {
+  "Light": "#dc3e42",
+  "Dark": "#ec5d5e"
+ },
+ "red/11": {
+  "Light": "#ce2c31",
+  "Dark": "#ff9592"
+ },
+ "red/12": {
+  "Light": "#641723",
+  "Dark": "#ffd1d9"
+ },
+ "red/a1": {
+  "Light": "#ff000003",
+  "Dark": "#f4121209"
+ },
+ "red/a2": {
+  "Light": "#ff000008",
+  "Dark": "#f22f3e11"
+ },
+ "red/a3": {
+  "Light": "#f3000d14",
+  "Dark": "#ff173f2d"
+ },
+ "red/a4": {
+  "Light": "#ff000824",
+  "Dark": "#fe0a3b44"
+ },
+ "red/a5": {
+  "Light": "#ff000632",
+  "Dark": "#ff204756"
+ },
+ "red/a6": {
+  "Light": "#f8000442",
+  "Dark": "#ff3e5668"
+ },
+ "red/a7": {
+  "Light": "#df000356",
+  "Dark": "#ff536184"
+ },
+ "red/a8": {
+  "Light": "#d2000571",
+  "Dark": "#ff5d61b0"
+ },
+ "red/a9": {
+  "Light": "#db0007b7",
+  "Dark": "#fe4e54e4"
+ },
+ "red/a10": {
+  "Light": "#d10005c1",
+  "Dark": "#ff6465eb"
+ },
+ "red/a11": {
+  "Light": "#c40006d3",
+  "Dark": "#ff9592"
+ },
+ "red/a12": {
+  "Light": "#55000de8",
+  "Dark": "#ffd1d9"
+ },
+ "ruby/1": {
+  "Light": "#fffcfd",
+  "Dark": "#191113"
+ },
+ "ruby/2": {
+  "Light": "#fff7f8",
+  "Dark": "#1e1517"
+ },
+ "ruby/3": {
+  "Light": "#feeaed",
+  "Dark": "#3a141e"
+ },
+ "ruby/4": {
+  "Light": "#ffdce1",
+  "Dark": "#4e1325"
+ },
+ "ruby/5": {
+  "Light": "#ffced6",
+  "Dark": "#5e1a2e"
+ },
+ "ruby/6": {
+  "Light": "#f8bfc8",
+  "Dark": "#6f2539"
+ },
+ "ruby/7": {
+  "Light": "#efacb8",
+  "Dark": "#883447"
+ },
+ "ruby/8": {
+  "Light": "#e592a3",
+  "Dark": "#b3445a"
+ },
+ "ruby/9": {
+  "Light": "#e54666",
+  "Dark": "#e54666"
+ },
+ "ruby/10": {
+  "Light": "#dc3b5d",
+  "Dark": "#ec5a72"
+ },
+ "ruby/11": {
+  "Light": "#ca244d",
+  "Dark": "#ff949d"
+ },
+ "ruby/12": {
+  "Light": "#64172b",
+  "Dark": "#fed2e1"
+ },
+ "ruby/a1": {
+  "Light": "#ff005503",
+  "Dark": "#f4124a09"
+ },
+ "ruby/a2": {
+  "Light": "#ff002008",
+  "Dark": "#fe5a7f0e"
+ },
+ "ruby/a3": {
+  "Light": "#f3002515",
+  "Dark": "#ff235d2c"
+ },
+ "ruby/a4": {
+  "Light": "#ff002523",
+  "Dark": "#fd195e42"
+ },
+ "ruby/a5": {
+  "Light": "#ff002a31",
+  "Dark": "#fe2d6b53"
+ },
+ "ruby/a6": {
+  "Light": "#e4002440",
+  "Dark": "#ff447665"
+ },
+ "ruby/a7": {
+  "Light": "#ce002553",
+  "Dark": "#ff577d80"
+ },
+ "ruby/a8": {
+  "Light": "#c300286d",
+  "Dark": "#ff5c7cae"
+ },
+ "ruby/a9": {
+  "Light": "#db002cb9",
+  "Dark": "#fe4c70e4"
+ },
+ "ruby/a10": {
+  "Light": "#d2002cc4",
+  "Dark": "#ff617beb"
+ },
+ "ruby/a11": {
+  "Light": "#c10030db",
+  "Dark": "#ff949d"
+ },
+ "ruby/a12": {
+  "Light": "#550016e8",
+  "Dark": "#ffd3e2fe"
+ },
+ "sage/1": {
+  "Light": "#fbfdfc",
+  "Dark": "#101211"
+ },
+ "sage/2": {
+  "Light": "#f7f9f8",
+  "Dark": "#171918"
+ },
+ "sage/3": {
+  "Light": "#eef1f0",
+  "Dark": "#202221"
+ },
+ "sage/4": {
+  "Light": "#e6e9e8",
+  "Dark": "#272a29"
+ },
+ "sage/5": {
+  "Light": "#dfe2e0",
+  "Dark": "#2e3130"
+ },
+ "sage/6": {
+  "Light": "#d7dad9",
+  "Dark": "#373b39"
+ },
+ "sage/7": {
+  "Light": "#cbcfcd",
+  "Dark": "#444947"
+ },
+ "sage/8": {
+  "Light": "#b8bcba",
+  "Dark": "#5b625f"
+ },
+ "sage/9": {
+  "Light": "#868e8b",
+  "Dark": "#63706b"
+ },
+ "sage/10": {
+  "Light": "#7c8481",
+  "Dark": "#717d79"
+ },
+ "sage/11": {
+  "Light": "#5f6563",
+  "Dark": "#adb5b2"
+ },
+ "sage/12": {
+  "Light": "#1a211e",
+  "Dark": "#eceeed"
+ },
+ "sage/a1": {
+  "Light": "#00804004",
+  "Dark": "#00000000"
+ },
+ "sage/a2": {
+  "Light": "#00402008",
+  "Dark": "#f0f2f108"
+ },
+ "sage/a3": {
+  "Light": "#002d1e11",
+  "Dark": "#f3f5f412"
+ },
+ "sage/a4": {
+  "Light": "#001f1519",
+  "Dark": "#f2fefd1a"
+ },
+ "sage/a5": {
+  "Light": "#00180820",
+  "Dark": "#f1fbfa22"
+ },
+ "sage/a6": {
+  "Light": "#00140d28",
+  "Dark": "#edfbf42d"
+ },
+ "sage/a7": {
+  "Light": "#00140a34",
+  "Dark": "#edfcf73c"
+ },
+ "sage/a8": {
+  "Light": "#000f0847",
+  "Dark": "#ebfdf657"
+ },
+ "sage/a9": {
+  "Light": "#00110b79",
+  "Dark": "#dffdf266"
+ },
+ "sage/a10": {
+  "Light": "#00100a83",
+  "Dark": "#e5fdf674"
+ },
+ "sage/a11": {
+  "Light": "#000a07a0",
+  "Dark": "#f4fefbb0"
+ },
+ "sage/a12": {
+  "Light": "#000805e5",
+  "Dark": "#fdfffeed"
+ },
+ "sand/1": {
+  "Light": "#fdfdfc",
+  "Dark": "#111110"
+ },
+ "sand/2": {
+  "Light": "#f9f9f8",
+  "Dark": "#191918"
+ },
+ "sand/3": {
+  "Light": "#f1f0ef",
+  "Dark": "#222221"
+ },
+ "sand/4": {
+  "Light": "#e9e8e6",
+  "Dark": "#2a2a28"
+ },
+ "sand/5": {
+  "Light": "#e2e1de",
+  "Dark": "#31312e"
+ },
+ "sand/6": {
+  "Light": "#dad9d6",
+  "Dark": "#3b3a37"
+ },
+ "sand/7": {
+  "Light": "#cfceca",
+  "Dark": "#494844"
+ },
+ "sand/8": {
+  "Light": "#bcbbb5",
+  "Dark": "#62605b"
+ },
+ "sand/9": {
+  "Light": "#8d8d86",
+  "Dark": "#6f6d66"
+ },
+ "sand/10": {
+  "Light": "#82827c",
+  "Dark": "#7c7b74"
+ },
+ "sand/11": {
+  "Light": "#63635e",
+  "Dark": "#b5b3ad"
+ },
+ "sand/12": {
+  "Light": "#21201c",
+  "Dark": "#eeeeec"
+ },
+ "sand/a1": {
+  "Light": "#55550003",
+  "Dark": "#00000000"
+ },
+ "sand/a2": {
+  "Light": "#25250007",
+  "Dark": "#f4f4f309"
+ },
+ "sand/a3": {
+  "Light": "#20100010",
+  "Dark": "#f6f6f513"
+ },
+ "sand/a4": {
+  "Light": "#1f150019",
+  "Dark": "#fefef31b"
+ },
+ "sand/a5": {
+  "Light": "#1f180021",
+  "Dark": "#fbfbeb23"
+ },
+ "sand/a6": {
+  "Light": "#19130029",
+  "Dark": "#fffaed2d"
+ },
+ "sand/a7": {
+  "Light": "#19140035",
+  "Dark": "#fffbed3c"
+ },
+ "sand/a8": {
+  "Light": "#1915014a",
+  "Dark": "#fff9eb57"
+ },
+ "sand/a9": {
+  "Light": "#0f0f0079",
+  "Dark": "#fffae965"
+ },
+ "sand/a10": {
+  "Light": "#0c0c0083",
+  "Dark": "#fffdee73"
+ },
+ "sand/a11": {
+  "Light": "#080800a1",
+  "Dark": "#fffcf4b0"
+ },
+ "sand/a12": {
+  "Light": "#060500e3",
+  "Dark": "#fffffded"
+ },
+ "sky/1": {
+  "Light": "#f9feff",
+  "Dark": "#0d141f"
+ },
+ "sky/2": {
+  "Light": "#f1fafd",
+  "Dark": "#111a27"
+ },
+ "sky/3": {
+  "Light": "#e1f6fd",
+  "Dark": "#112840"
+ },
+ "sky/4": {
+  "Light": "#d1f0fa",
+  "Dark": "#113555"
+ },
+ "sky/5": {
+  "Light": "#bee7f5",
+  "Dark": "#154467"
+ },
+ "sky/6": {
+  "Light": "#a9daed",
+  "Dark": "#1b537b"
+ },
+ "sky/7": {
+  "Light": "#8dcae3",
+  "Dark": "#1f6692"
+ },
+ "sky/8": {
+  "Light": "#60b3d7",
+  "Dark": "#197cae"
+ },
+ "sky/9": {
+  "Light": "#7ce2fe",
+  "Dark": "#7ce2fe"
+ },
+ "sky/10": {
+  "Light": "#74daf8",
+  "Dark": "#a8eeff"
+ },
+ "sky/11": {
+  "Light": "#00749e",
+  "Dark": "#75c7f0"
+ },
+ "sky/12": {
+  "Light": "#1d3e56",
+  "Dark": "#c2f3ff"
+ },
+ "sky/a1": {
+  "Light": "#00d5ff06",
+  "Dark": "#0044ff0f"
+ },
+ "sky/a2": {
+  "Light": "#00a4db0e",
+  "Dark": "#1171fb18"
+ },
+ "sky/a3": {
+  "Light": "#00b3ee1e",
+  "Dark": "#1184fc33"
+ },
+ "sky/a4": {
+  "Light": "#00ace42e",
+  "Dark": "#128fff49"
+ },
+ "sky/a5": {
+  "Light": "#00a1d841",
+  "Dark": "#1c9dfd5d"
+ },
+ "sky/a6": {
+  "Light": "#0092ca56",
+  "Dark": "#28a5ff72"
+ },
+ "sky/a7": {
+  "Light": "#0089c172",
+  "Dark": "#2badfe8b"
+ },
+ "sky/a8": {
+  "Light": "#0085bf9f",
+  "Dark": "#1db2fea9"
+ },
+ "sky/a9": {
+  "Light": "#00c7fe83",
+  "Dark": "#7ce3fffe"
+ },
+ "sky/a10": {
+  "Light": "#00bcf38b",
+  "Dark": "#a8eeff"
+ },
+ "sky/a11": {
+  "Light": "#00749e",
+  "Dark": "#7cd3ffef"
+ },
+ "sky/a12": {
+  "Light": "#002540e2",
+  "Dark": "#c2f3ff"
+ },
+ "slate/1": {
+  "Light": "#fcfcfd",
+  "Dark": "#111113"
+ },
+ "slate/2": {
+  "Light": "#f9f9fb",
+  "Dark": "#18191b"
+ },
+ "slate/3": {
+  "Light": "#f0f0f3",
+  "Dark": "#212225"
+ },
+ "slate/4": {
+  "Light": "#e8e8ec",
+  "Dark": "#272a2d"
+ },
+ "slate/5": {
+  "Light": "#e0e1e6",
+  "Dark": "#2e3135"
+ },
+ "slate/6": {
+  "Light": "#d9d9e0",
+  "Dark": "#363a3f"
+ },
+ "slate/7": {
+  "Light": "#cdced6",
+  "Dark": "#43484e"
+ },
+ "slate/8": {
+  "Light": "#b9bbc6",
+  "Dark": "#5a6169"
+ },
+ "slate/9": {
+  "Light": "#8b8d98",
+  "Dark": "#696e77"
+ },
+ "slate/10": {
+  "Light": "#80838d",
+  "Dark": "#777b84"
+ },
+ "slate/11": {
+  "Light": "#60646c",
+  "Dark": "#b0b4ba"
+ },
+ "slate/12": {
+  "Light": "#1c2024",
+  "Dark": "#edeef0"
+ },
+ "slate/a1": {
+  "Light": "#00005503",
+  "Dark": "#00000000"
+ },
+ "slate/a2": {
+  "Light": "#00005506",
+  "Dark": "#d8f4f609"
+ },
+ "slate/a3": {
+  "Light": "#0000330f",
+  "Dark": "#ddeaf814"
+ },
+ "slate/a4": {
+  "Light": "#00002d17",
+  "Dark": "#d3edf81d"
+ },
+ "slate/a5": {
+  "Light": "#0009321f",
+  "Dark": "#d9edfe25"
+ },
+ "slate/a6": {
+  "Light": "#00002f26",
+  "Dark": "#d6ebfd30"
+ },
+ "slate/a7": {
+  "Light": "#00062e32",
+  "Dark": "#d9edff40"
+ },
+ "slate/a8": {
+  "Light": "#00083046",
+  "Dark": "#d9edff5d"
+ },
+ "slate/a9": {
+  "Light": "#00051d74",
+  "Dark": "#dfebfd6d"
+ },
+ "slate/a10": {
+  "Light": "#00071b7f",
+  "Dark": "#e5edfd7b"
+ },
+ "slate/a11": {
+  "Light": "#0007149f",
+  "Dark": "#f1f7feb5"
+ },
+ "slate/a12": {
+  "Light": "#000509e3",
+  "Dark": "#fcfdffef"
+ },
+ "teal/1": {
+  "Light": "#fafefd",
+  "Dark": "#0d1514"
+ },
+ "teal/2": {
+  "Light": "#f3fbf9",
+  "Dark": "#111c1b"
+ },
+ "teal/3": {
+  "Light": "#e0f8f3",
+  "Dark": "#0d2d2a"
+ },
+ "teal/4": {
+  "Light": "#ccf3ea",
+  "Dark": "#023b37"
+ },
+ "teal/5": {
+  "Light": "#b8eae0",
+  "Dark": "#084843"
+ },
+ "teal/6": {
+  "Light": "#a1ded2",
+  "Dark": "#145750"
+ },
+ "teal/7": {
+  "Light": "#83cdc1",
+  "Dark": "#1c6961"
+ },
+ "teal/8": {
+  "Light": "#53b9ab",
+  "Dark": "#207e73"
+ },
+ "teal/9": {
+  "Light": "#12a594",
+  "Dark": "#12a594"
+ },
+ "teal/10": {
+  "Light": "#0d9b8a",
+  "Dark": "#0eb39e"
+ },
+ "teal/11": {
+  "Light": "#008573",
+  "Dark": "#0bd8b6"
+ },
+ "teal/12": {
+  "Light": "#0d3d38",
+  "Dark": "#adf0dd"
+ },
+ "teal/a1": {
+  "Light": "#00cc9905",
+  "Dark": "#00deab05"
+ },
+ "teal/a2": {
+  "Light": "#00aa800c",
+  "Dark": "#12fbe60c"
+ },
+ "teal/a3": {
+  "Light": "#00c69d1f",
+  "Dark": "#00ffe61e"
+ },
+ "teal/a4": {
+  "Light": "#00c39633",
+  "Dark": "#00ffe92d"
+ },
+ "teal/a5": {
+  "Light": "#00b49047",
+  "Dark": "#00ffea3b"
+ },
+ "teal/a6": {
+  "Light": "#00a6855e",
+  "Dark": "#1cffe84b"
+ },
+ "teal/a7": {
+  "Light": "#0099807c",
+  "Dark": "#2efde85f"
+ },
+ "teal/a8": {
+  "Light": "#009783ac",
+  "Dark": "#32ffe775"
+ },
+ "teal/a9": {
+  "Light": "#009e8ced",
+  "Dark": "#13ffe49f"
+ },
+ "teal/a10": {
+  "Light": "#009684f2",
+  "Dark": "#0dffe0ae"
+ },
+ "teal/a11": {
+  "Light": "#008573",
+  "Dark": "#0afed5d6"
+ },
+ "teal/a12": {
+  "Light": "#00332df2",
+  "Dark": "#b8ffebef"
+ },
+ "tomato/1": {
+  "Light": "#fffcfc",
+  "Dark": "#181111"
+ },
+ "tomato/2": {
+  "Light": "#fff8f7",
+  "Dark": "#1f1513"
+ },
+ "tomato/3": {
+  "Light": "#feebe7",
+  "Dark": "#391714"
+ },
+ "tomato/4": {
+  "Light": "#ffdcd3",
+  "Dark": "#4e1511"
+ },
+ "tomato/5": {
+  "Light": "#ffcdc2",
+  "Dark": "#5e1c16"
+ },
+ "tomato/6": {
+  "Light": "#fdbdaf",
+  "Dark": "#6e2920"
+ },
+ "tomato/7": {
+  "Light": "#f5a898",
+  "Dark": "#853a2d"
+ },
+ "tomato/8": {
+  "Light": "#ec8e7b",
+  "Dark": "#ac4d39"
+ },
+ "tomato/9": {
+  "Light": "#e54d2e",
+  "Dark": "#e54d2e"
+ },
+ "tomato/10": {
+  "Light": "#dd4425",
+  "Dark": "#ec6142"
+ },
+ "tomato/11": {
+  "Light": "#d13415",
+  "Dark": "#ff977d"
+ },
+ "tomato/12": {
+  "Light": "#5c271f",
+  "Dark": "#fbd3cb"
+ },
+ "tomato/a1": {
+  "Light": "#ff000003",
+  "Dark": "#f1121208"
+ },
+ "tomato/a2": {
+  "Light": "#ff200008",
+  "Dark": "#ff55330f"
+ },
+ "tomato/a3": {
+  "Light": "#f52b0018",
+  "Dark": "#ff35232b"
+ },
+ "tomato/a4": {
+  "Light": "#ff35002c",
+  "Dark": "#fd201142"
+ },
+ "tomato/a5": {
+  "Light": "#ff2e003d",
+  "Dark": "#fe332153"
+ },
+ "tomato/a6": {
+  "Light": "#f92d0050",
+  "Dark": "#ff4f3864"
+ },
+ "tomato/a7": {
+  "Light": "#e7280067",
+  "Dark": "#fd644a7d"
+ },
+ "tomato/a8": {
+  "Light": "#db250084",
+  "Dark": "#fe6d4ea7"
+ },
+ "tomato/a9": {
+  "Light": "#df2600d1",
+  "Dark": "#fe5431e4"
+ },
+ "tomato/a10": {
+  "Light": "#d72400da",
+  "Dark": "#ff6847eb"
+ },
+ "tomato/a11": {
+  "Light": "#cd2200ea",
+  "Dark": "#ff977d"
+ },
+ "tomato/a12": {
+  "Light": "#460900e0",
+  "Dark": "#ffd6cefb"
+ },
+ "violet/1": {
+  "Light": "#fdfcfe",
+  "Dark": "#14121f"
+ },
+ "violet/2": {
+  "Light": "#faf8ff",
+  "Dark": "#1b1525"
+ },
+ "violet/3": {
+  "Light": "#f4f0fe",
+  "Dark": "#291f43"
+ },
+ "violet/4": {
+  "Light": "#ebe4ff",
+  "Dark": "#33255b"
+ },
+ "violet/5": {
+  "Light": "#e1d9ff",
+  "Dark": "#3c2e69"
+ },
+ "violet/6": {
+  "Light": "#d4cafe",
+  "Dark": "#473876"
+ },
+ "violet/7": {
+  "Light": "#c2b5f5",
+  "Dark": "#56468b"
+ },
+ "violet/8": {
+  "Light": "#aa99ec",
+  "Dark": "#6958ad"
+ },
+ "violet/9": {
+  "Light": "#6e56cf",
+  "Dark": "#6e56cf"
+ },
+ "violet/10": {
+  "Light": "#654dc4",
+  "Dark": "#7d66d9"
+ },
+ "violet/11": {
+  "Light": "#6550b9",
+  "Dark": "#baa7ff"
+ },
+ "violet/12": {
+  "Light": "#2f265f",
+  "Dark": "#e2ddfe"
+ },
+ "violet/a1": {
+  "Light": "#5500aa03",
+  "Dark": "#4422ff0f"
+ },
+ "violet/a2": {
+  "Light": "#4900ff07",
+  "Dark": "#853ff916"
+ },
+ "violet/a3": {
+  "Light": "#4400ee0f",
+  "Dark": "#8354fe36"
+ },
+ "violet/a4": {
+  "Light": "#4300ff1b",
+  "Dark": "#7d51fd50"
+ },
+ "violet/a5": {
+  "Light": "#3600ff26",
+  "Dark": "#845ffd5f"
+ },
+ "violet/a6": {
+  "Light": "#3100fb35",
+  "Dark": "#8f6cfd6d"
+ },
+ "violet/a7": {
+  "Light": "#2d01dd4a",
+  "Dark": "#9879ff83"
+ },
+ "violet/a8": {
+  "Light": "#2b00d066",
+  "Dark": "#977dfea8"
+ },
+ "violet/a9": {
+  "Light": "#2400b7a9",
+  "Dark": "#8668ffcc"
+ },
+ "violet/a10": {
+  "Light": "#2300abb2",
+  "Dark": "#9176fed7"
+ },
+ "violet/a11": {
+  "Light": "#1f0099af",
+  "Dark": "#baa7ff"
+ },
+ "violet/a12": {
+  "Light": "#0b0043d9",
+  "Dark": "#e3defffe"
+ },
+ "white/a1": {
+  "Light": "rgba(255, 255, 255, 0.05)",
+  "Dark": "rgba(255, 255, 255, 0.05)"
+ },
+ "white/a2": {
+  "Light": "rgba(255, 255, 255, 0.1)",
+  "Dark": "rgba(255, 255, 255, 0.1)"
+ },
+ "white/a3": {
+  "Light": "rgba(255, 255, 255, 0.15)",
+  "Dark": "rgba(255, 255, 255, 0.15)"
+ },
+ "white/a4": {
+  "Light": "rgba(255, 255, 255, 0.2)",
+  "Dark": "rgba(255, 255, 255, 0.2)"
+ },
+ "white/a5": {
+  "Light": "rgba(255, 255, 255, 0.3)",
+  "Dark": "rgba(255, 255, 255, 0.3)"
+ },
+ "white/a6": {
+  "Light": "rgba(255, 255, 255, 0.4)",
+  "Dark": "rgba(255, 255, 255, 0.4)"
+ },
+ "white/a7": {
+  "Light": "rgba(255, 255, 255, 0.5)",
+  "Dark": "rgba(255, 255, 255, 0.5)"
+ },
+ "white/a8": {
+  "Light": "rgba(255, 255, 255, 0.6)",
+  "Dark": "rgba(255, 255, 255, 0.6)"
+ },
+ "white/a9": {
+  "Light": "rgba(255, 255, 255, 0.7)",
+  "Dark": "rgba(255, 255, 255, 0.7)"
+ },
+ "white/a10": {
+  "Light": "rgba(255, 255, 255, 0.8)",
+  "Dark": "rgba(255, 255, 255, 0.8)"
+ },
+ "white/a11": {
+  "Light": "rgba(255, 255, 255, 0.9)",
+  "Dark": "rgba(255, 255, 255, 0.9)"
+ },
+ "white/a12": {
+  "Light": "rgba(255, 255, 255, 0.95)",
+  "Dark": "rgba(255, 255, 255, 0.95)"
+ },
+ "yellow/1": {
+  "Light": "#fdfdf9",
+  "Dark": "#14120b"
+ },
+ "yellow/2": {
+  "Light": "#fefce9",
+  "Dark": "#1b180f"
+ },
+ "yellow/3": {
+  "Light": "#fffab8",
+  "Dark": "#2d2305"
+ },
+ "yellow/4": {
+  "Light": "#fff394",
+  "Dark": "#362b00"
+ },
+ "yellow/5": {
+  "Light": "#ffe770",
+  "Dark": "#433500"
+ },
+ "yellow/6": {
+  "Light": "#f3d768",
+  "Dark": "#524202"
+ },
+ "yellow/7": {
+  "Light": "#e4c767",
+  "Dark": "#665417"
+ },
+ "yellow/8": {
+  "Light": "#d5ae39",
+  "Dark": "#836a21"
+ },
+ "yellow/9": {
+  "Light": "#ffe629",
+  "Dark": "#ffe629"
+ },
+ "yellow/10": {
+  "Light": "#ffdc00",
+  "Dark": "#ffff57"
+ },
+ "yellow/11": {
+  "Light": "#9e6c00",
+  "Dark": "#f5e147"
+ },
+ "yellow/12": {
+  "Light": "#473b1f",
+  "Dark": "#f6eeb4"
+ },
+ "yellow/a1": {
+  "Light": "#aaaa0006",
+  "Dark": "#d1510004"
+ },
+ "yellow/a2": {
+  "Light": "#f4dd0016",
+  "Dark": "#f9b4000b"
+ },
+ "yellow/a3": {
+  "Light": "#ffee0047",
+  "Dark": "#ffaa001e"
+ },
+ "yellow/a4": {
+  "Light": "#ffe3016b",
+  "Dark": "#fdb70028"
+ },
+ "yellow/a5": {
+  "Light": "#ffd5008f",
+  "Dark": "#febb0036"
+ },
+ "yellow/a6": {
+  "Light": "#ebbc0097",
+  "Dark": "#fec40046"
+ },
+ "yellow/a7": {
+  "Light": "#d2a10098",
+  "Dark": "#fdcb225c"
+ },
+ "yellow/a8": {
+  "Light": "#c99700c6",
+  "Dark": "#fdca327b"
+ },
+ "yellow/a9": {
+  "Light": "#ffe100d6",
+  "Dark": "#ffe629"
+ },
+ "yellow/a10": {
+  "Light": "#ffdc00",
+  "Dark": "#ffff57"
+ },
+ "yellow/a11": {
+  "Light": "#9e6c00",
+  "Dark": "#fee949f5"
+ },
+ "yellow/a12": {
+  "Light": "#2e2000e0",
+  "Dark": "#fef6baf6"
+ }
+}

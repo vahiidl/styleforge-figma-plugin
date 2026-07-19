@@ -5,8 +5,12 @@
 import type { ParsedTokenSet, ParsedColor, ParsedFloat, ParsedShadow, ParsedTypography, ParsedFont } from './parser';
 import type { FigmaColor } from './colorUtils';
 import { parseColorValue } from './colorUtils';
+import { parseDimension } from './colorUtils';
+import { parseShadowValue } from './parser';
+import type { ThemeExtras } from '../adapters/types';
 import {
     findOrCreateCollection,
+    setCodeSyntax,
     ensureModes,
     setColorVariable,
     setFloatVariable,
@@ -43,6 +47,10 @@ export interface ThemeImportOptions extends ImportOptions {
     lightTokens: Record<string, string>;
     darkTokens: Record<string, string>;
     primitiveCollectionName: string;
+    /** Extra non-color outputs (floats, strings, state colors, shadow/text styles). */
+    extras?: ThemeExtras;
+    /** CSS custom-property prefix for code syntax, e.g. '' → var(--primary). */
+    codeSyntaxPrefix?: string;
 }
 
 export interface ImportProgress {
@@ -97,6 +105,7 @@ export async function importPrimitives(
             const mappedFamily = mapFontFamily(font.family);
             const v = await setStringVariable(info.collection, modeId, name, mappedFamily);
             applyScopes(v, ['FONT_FAMILY'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--font-' + font.name + ')');
             if (font.name === 'sans') defaultFontFamilyVar = v;
         }
     }
@@ -108,6 +117,7 @@ export async function importPrimitives(
             const name = 'typography/weight/' + fw.path.join('/');
             const v = await setFloatVariable(info.collection, modeId, name, fw.value);
             applyScopes(v, ['FONT_WEIGHT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--font-weight-' + fw.path.join('-') + ')');
             if (fw.path.includes('normal') || fw.value === 400) defaultFontWeightVar = v;
             current++;
         }
@@ -128,6 +138,7 @@ export async function importPrimitives(
             var name = 'colors/' + color.path.join('/');
             var v = await setColorVariable(info.collection, modeId, name, color.figmaColor);
             applyScopes(v, ['ALL_FILLS', 'STROKE_COLOR', 'EFFECT_COLOR'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--color-' + color.path.join('-') + ')');
             current++;
             if (current % 20 === 0) {
                 onProgress && onProgress({ current: current, total: total, phase: 'Colors', message: 'Colors: ' + current + '/' + total });
@@ -143,6 +154,7 @@ export async function importPrimitives(
             var name = 'spacing/' + sp.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, sp.value);
             applyScopes(v, ['GAP', 'WIDTH_HEIGHT', 'PARAGRAPH_SPACING'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--spacing-' + sp.path.join('-') + ')');
             current++;
         }
     }
@@ -155,6 +167,7 @@ export async function importPrimitives(
             var name = 'radius/' + rad.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, rad.value);
             applyScopes(v, ['CORNER_RADIUS'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--radius-' + rad.path.join('-') + ')');
             current++;
         }
     }
@@ -168,6 +181,7 @@ export async function importPrimitives(
             var name = 'blur/' + bl.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, bl.value);
             applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--blur-' + bl.path.join('-') + ')');
 
             // Create Effect Style
             await createBlurStyle(name, bl.value, false, v); // isBackdrop = false
@@ -197,6 +211,7 @@ export async function importPrimitives(
             const variableName = 'backdrop-blur/' + bl.path.join('/');
             const v = await setFloatVariable(info.collection, modeId, variableName, bl.value);
             applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--backdrop-blur-' + bl.path.join('-') + ')');
 
             await createBlurStyle(variableName, bl.value, true, v);
         }
@@ -210,6 +225,7 @@ export async function importPrimitives(
                 const name = 'backdrop-blur/' + bb.path.join('/');
                 const v = await setFloatVariable(info.collection, modeId, name, bb.value);
                 applyScopes(v, ['EFFECT_FLOAT'] as VariableScope[]);
+                setCodeSyntax(v, 'var(--backdrop-blur-' + bb.path.join('-') + ')');
                 await createBlurStyle(name, bb.value, true, v);
             }
         }
@@ -223,6 +239,7 @@ export async function importPrimitives(
             var name = 'opacity/' + op.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, op.value);
             applyScopes(v, ['OPACITY'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--opacity-' + op.path.join('-') + ')');
             current++;
         }
     }
@@ -235,6 +252,7 @@ export async function importPrimitives(
             var name = 'breakpoint/' + bp.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, bp.value);
             applyScopes(v, ['WIDTH_HEIGHT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--breakpoint-' + bp.path.join('-') + ')');
             current++;
         }
     }
@@ -247,6 +265,7 @@ export async function importPrimitives(
             var name = 'container/' + cont.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, cont.value);
             applyScopes(v, ['WIDTH_HEIGHT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--container-' + cont.path.join('-') + ')');
             current++;
         }
     }
@@ -260,6 +279,7 @@ export async function importPrimitives(
             var name = 'typography/tracking/' + tr.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, tr.value);
             applyScopes(v, ['LETTER_SPACING'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--tracking-' + tr.path.join('-') + ')');
             // Store for binding if needed (though text styles usually don't map 1:1 to these unless specifically requested)
             current++;
         }
@@ -278,6 +298,7 @@ export async function importPrimitives(
             var name = 'typography/leading/' + ld.path.join('/');
             var v = await setFloatVariable(info.collection, modeId, name, ld.value);
             applyScopes(v, ['LINE_HEIGHT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--leading-' + ld.path.join('-') + ')');
             current++;
         }
     }
@@ -299,6 +320,7 @@ export async function importPrimitives(
             const name = 'border-width/' + bw.path.join('/');
             const v = await setFloatVariable(info.collection, modeId, name, bw.value);
             applyScopes(v, ['STROKE_FLOAT'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--border-width-' + bw.path.join('-') + ')');
             current++;
         }
     }
@@ -320,6 +342,7 @@ export async function importPrimitives(
             // I will respect the parsed value from parser.
             const v = await setFloatVariable(info.collection, modeId, name, op.value);
             applyScopes(v, ['OPACITY'] as VariableScope[]);
+            setCodeSyntax(v, 'var(--opacity-' + op.path.join('-') + ')');
             current++;
         }
     }
@@ -332,6 +355,7 @@ export async function importPrimitives(
             const v = await setFloatVariable(info.collection, modeId, name, sk.value);
             // Explicitly remove all scopes as requested (skew has no scopes)
             applyScopes(v, []);
+            setCodeSyntax(v, 'var(--skew-' + sk.path.join('-') + ')');
             current++;
         }
     }
@@ -346,6 +370,7 @@ export async function importPrimitives(
             var sizeVarName = 'typography/size/' + typo.name;
             var sizeVar = await setFloatVariable(info.collection, modeId, sizeVarName, typo.fontSize);
             applyScopes(sizeVar, ['FONT_SIZE'] as VariableScope[]);
+            setCodeSyntax(sizeVar, 'var(--text-' + typo.name + ')');
 
             // 2. Create Line Height Variable (Specific to this text style)
             // We calculate the pixel value for the variable to match our logic
@@ -358,6 +383,7 @@ export async function importPrimitives(
             var lhVarName = 'typography/leading/' + typo.name;
             var lhVar = await setFloatVariable(info.collection, modeId, lhVarName, lineHeightPx);
             applyScopes(lhVar, ['LINE_HEIGHT'] as VariableScope[]);
+            setCodeSyntax(lhVar, 'var(--text-' + typo.name + '--line-height)');
 
             // 3. Create Letter Spacing Variable
             // Check if letterSpacing is defined; if not, default to 0 (per user check)
@@ -374,6 +400,7 @@ export async function importPrimitives(
                 lsVar = await setFloatVariable(info.collection, modeId, normalName, 0);
             }
             applyScopes(lsVar, ['LETTER_SPACING'] as VariableScope[]);
+            setCodeSyntax(lsVar, 'var(--text-' + typo.name + '--letter-spacing)');
 
             // 4. Create Text Style & Bind
             // Use 'Inter' as default family string if variable missing
@@ -389,6 +416,7 @@ export async function importPrimitives(
                     // Find specific variable for this weight
                     const wName = 'typography/weight/' + weightName;
                     const wVar = await setFloatVariable(info.collection, modeId, wName, fw.value);
+                    setCodeSyntax(wVar, 'var(--font-weight-' + weightName + ')');
 
                     // Clone typo and override weight for this specific style
                     const specificTypo = { ...typo, fontWeight: fw.value };
@@ -412,6 +440,7 @@ export async function importPrimitives(
                     if (match) {
                         const wName = 'typography/weight/' + match.path.join('/');
                         specificWeightVar = await setFloatVariable(info.collection, modeId, wName, match.value);
+                        setCodeSyntax(specificWeightVar, 'var(--font-weight-' + match.path.join('-') + ')');
                     }
                 }
 
@@ -463,7 +492,8 @@ export async function importThemeTokens(
     var info = await findOrCreateCollection(options.collectionName);
     info = ensureModes(info, ['Light', 'Dark']);
     var lightModeId = info.modeIds['Light'];
-    var darkModeId = info.modeIds['Dark'];
+    // undefined on Free/Starter files (1-mode plan limit) — dark values are skipped.
+    var darkModeId: string | undefined = info.modeIds['Dark'];
 
     const allCollections = await figma.variables.getLocalVariableCollectionsAsync();
     var primitiveCollections = allCollections
@@ -493,6 +523,7 @@ export async function importThemeTokens(
         if (lightColor || darkColor) {
             var variable = await findOrCreateVariable(info.collection, cleanName, 'COLOR');
             applyScopes(variable, ['ALL_FILLS', 'STROKE_COLOR', 'EFFECT_COLOR'] as VariableScope[]);
+            setCodeSyntax(variable, 'var(--' + cleanName + ')');
 
             if (lightColor) {
                 var alias = resolveColorAlias(lightColor, primitiveVars, primitiveModeId);
@@ -503,12 +534,44 @@ export async function importThemeTokens(
                 }
             }
 
-            if (darkColor) {
+            if (darkColor && darkModeId) {
                 var alias = resolveColorAlias(darkColor, primitiveVars, primitiveModeId);
                 if (alias) {
                     setVariableAlias(variable, darkModeId, alias);
                 } else {
                     variable.setValueForMode(darkModeId, darkColor);
+                }
+            }
+        }
+
+        // ── Non-color theme tokens (dimensions like `radius`) ──
+        if (!lightColor && !darkColor) {
+            var dimSource = lightValue || darkValue;
+            var dim = dimSource ? parseDimension(dimSource) : null;
+            if (dim !== null) {
+                var fv = await findOrCreateVariable(info.collection, cleanName, 'FLOAT');
+                var isRadius = cleanName.indexOf('radius') >= 0;
+                applyScopes(fv, (isRadius ? ['CORNER_RADIUS'] : ['GAP', 'WIDTH_HEIGHT']) as VariableScope[]);
+                setCodeSyntax(fv, 'var(--' + cleanName + ')');
+                var lightDim = lightValue ? parseDimension(lightValue) : null;
+                var darkDim = darkValue ? parseDimension(darkValue) : null;
+                fv.setValueForMode(lightModeId, lightDim !== null ? lightDim : dim);
+                if (darkModeId) fv.setValueForMode(darkModeId, darkDim !== null ? darkDim : dim);
+
+                // shadcn derived radius scale: sm..4xl from the base --radius
+                if (cleanName === 'radius') {
+                    var scaleDefs: [string, number][] = [
+                        ['radius-sm', 0.6], ['radius-md', 0.8], ['radius-lg', 1],
+                        ['radius-xl', 1.4], ['radius-2xl', 1.8], ['radius-3xl', 2.2], ['radius-4xl', 2.6],
+                    ];
+                    for (var sd = 0; sd < scaleDefs.length; sd++) {
+                        var sv = await findOrCreateVariable(info.collection, scaleDefs[sd][0], 'FLOAT');
+                        applyScopes(sv, ['CORNER_RADIUS'] as VariableScope[]);
+                        setCodeSyntax(sv, 'var(--' + scaleDefs[sd][0] + ')');
+                        var scaled = Math.round(dim * scaleDefs[sd][1] * 100) / 100;
+                        sv.setValueForMode(lightModeId, scaled);
+                        if (darkModeId) sv.setValueForMode(darkModeId, scaled);
+                    }
                 }
             }
         }
@@ -519,8 +582,94 @@ export async function importThemeTokens(
         }
     }
 
+    // ── Extras: floats, strings, state colors, shadow & text styles ──
+    if (options.extras) {
+        var ex = options.extras;
+        if (ex.floats) {
+            for (const f of ex.floats) {
+                const fv2 = await findOrCreateVariable(info.collection, f.name, 'FLOAT');
+                applyScopes(fv2, f.scopes as VariableScope[]);
+                if (f.codeSyntax) setCodeSyntax(fv2, f.codeSyntax);
+                fv2.setValueForMode(lightModeId, f.value);
+                if (darkModeId) fv2.setValueForMode(darkModeId, f.value);
+            }
+        }
+        if (ex.strings) {
+            for (const st of ex.strings) {
+                const sv2 = await findOrCreateVariable(info.collection, st.name, 'STRING');
+                applyScopes(sv2, st.scopes as VariableScope[]);
+                if (st.codeSyntax) setCodeSyntax(sv2, st.codeSyntax);
+                sv2.setValueForMode(lightModeId, st.value);
+                if (darkModeId) sv2.setValueForMode(darkModeId, st.value);
+            }
+        }
+        if (ex.stateColors) {
+            for (const sc of ex.stateColors) {
+                const lightC = parseColorValue(sc.light);
+                const darkC = parseColorValue(sc.dark);
+                if (!lightC && !darkC) continue;
+                const cv = await findOrCreateVariable(info.collection, sc.name, 'COLOR');
+                applyScopes(cv, (sc.scopes || ['ALL_FILLS', 'STROKE_COLOR']) as VariableScope[]);
+                if (sc.codeSyntax) setCodeSyntax(cv, sc.codeSyntax);
+                if (lightC) cv.setValueForMode(lightModeId, lightC);
+                if (darkC && darkModeId) cv.setValueForMode(darkModeId, darkC);
+            }
+        }
+        if (ex.shadows) {
+            for (const sh of ex.shadows) {
+                const layers = parseShadowValue(sh.value);
+                if (layers.length > 0) {
+                    await createShadowStyle(sh.name, { name: sh.name, shadows: layers, rawValue: sh.value });
+                }
+            }
+        }
+        if (ex.textStyles) {
+            for (const ts of ex.textStyles) {
+                await createSimpleTextStyle(ts);
+            }
+        }
+    }
+
     onProgress && onProgress({ current: total, total: total, phase: 'Done', message: 'Theme import complete!' });
     return info;
+}
+
+// ─── Simple (unbound) Text Style Creation ────────────────────────────────────
+
+const WEIGHT_STYLES: Record<number, string> = {
+    100: 'Thin', 200: 'Extra Light', 300: 'Light', 400: 'Regular',
+    500: 'Medium', 600: 'Semi Bold', 700: 'Bold', 800: 'Extra Bold', 900: 'Black',
+};
+
+export async function createSimpleTextStyle(ts: {
+    name: string; family?: string; fontSize: number;
+    fontWeight?: number; lineHeight?: number; letterSpacing?: number;
+}): Promise<void> {
+    var family = mapFontFamily(ts.family || 'Inter');
+    var styleName = WEIGHT_STYLES[ts.fontWeight || 400] || 'Regular';
+    var fontName = { family: family, style: styleName };
+    try {
+        await figma.loadFontAsync(fontName);
+    } catch (e) {
+        fontName = { family: 'Inter', style: WEIGHT_STYLES[ts.fontWeight || 400] || 'Regular' };
+        try { await figma.loadFontAsync(fontName); }
+        catch (e2) {
+            fontName = { family: 'Inter', style: 'Regular' };
+            try { await figma.loadFontAsync(fontName); } catch (e3) { return; }
+        }
+    }
+    var existing = (await figma.getLocalTextStylesAsync()).find(function (s: TextStyle) { return s.name === ts.name; });
+    var style = existing || figma.createTextStyle();
+    style.name = ts.name;
+    style.fontName = fontName;
+    style.fontSize = ts.fontSize;
+    if (ts.lineHeight !== undefined && ts.lineHeight > 0) {
+        var lh = ts.lineHeight < 4 ? ts.fontSize * ts.lineHeight : ts.lineHeight;
+        style.lineHeight = { value: lh, unit: 'PIXELS' };
+    }
+    if (ts.letterSpacing !== undefined) {
+        style.letterSpacing = { value: ts.letterSpacing, unit: 'PIXELS' };
+    }
 }
 
 // ─── Text Style Creation ─────────────────────────────────────────────────────

@@ -1,20 +1,15 @@
 // ─── Zustand Store ───────────────────────────────────────────────────────────
 
 import { create } from 'zustand';
-import type { TokenCategory } from '../adapters/types';
+import type { AdapterConfig, TokenCategory } from '../adapters/types';
 
 export type AppView = 'dashboard' | 'config' | 'importing';
 
-interface AdapterInfo {
-    id: string;
-    name: string;
-    description: string;
-    icon: string;
-    type: 'primitives' | 'theme';
-    dependencies: string[];
-    categories: TokenCategory[];
-    defaultCollectionName: string;
-}
+const DEFAULT_CATEGORIES: TokenCategory[] = [
+    'colors', 'spacing', 'radius', 'shadows', 'blur', 'typography',
+    'opacity', 'breakpoints', 'containers', 'fontWeights', 'tracking', 'leading',
+    'maxWidth', 'borderWidth', 'skew',
+];
 
 interface StoreState {
     // Navigation
@@ -32,6 +27,14 @@ interface StoreState {
     setSelectedCategories: (cats: TokenCategory[]) => void;
     collectionName: string;
     setCollectionName: (name: string) => void;
+
+    // Per-adapter config (base color, accent, ...)
+    adapterConfigs: Record<string, AdapterConfig>;
+    setAdapterConfig: (adapterId: string, key: keyof AdapterConfig, value: string) => void;
+
+    // Plan capability: does this file support multiple variable modes?
+    multiMode: boolean | null;
+    setMultiMode: (v: boolean) => void;
 
     // Import progress
     importProgress: number;
@@ -82,11 +85,7 @@ export const useStore = create<StoreState>((set) => ({
         return state;
     }),
 
-    // Default categories for Tailwind
-    selectedCategories: [
-        'colors', 'spacing', 'radius', 'shadows', 'blur', 'typography',
-        'opacity', 'breakpoints', 'containers', 'fontWeights', 'tracking', 'leading', 'maxWidth', 'borderWidth', 'skew',
-    ],
+    selectedCategories: DEFAULT_CATEGORIES,
 
     toggleCategory: (cat) =>
         set((state) => ({
@@ -98,6 +97,18 @@ export const useStore = create<StoreState>((set) => ({
 
     collectionName: '',
     setCollectionName: (name) => set({ collectionName: name }),
+
+    multiMode: null,
+    setMultiMode: (v) => set({ multiMode: v }),
+
+    adapterConfigs: { shadcn: { baseColor: 'neutral', accent: '' } },
+    setAdapterConfig: (adapterId, key, value) =>
+        set((state) => ({
+            adapterConfigs: {
+                ...state.adapterConfigs,
+                [adapterId]: { ...state.adapterConfigs[adapterId], [key]: value },
+            },
+        })),
 
     importProgress: 0,
     importPhase: '',
@@ -118,12 +129,9 @@ export const useStore = create<StoreState>((set) => ({
         set({
             view: 'dashboard',
             selectedLibraryIds: ['tailwindcss'],
-            // Keep default Tailwind categories selected
-            selectedCategories: [
-                'colors', 'spacing', 'radius', 'shadows', 'blur', 'typography',
-                'opacity', 'breakpoints', 'containers', 'fontWeights', 'tracking', 'leading', 'maxWidth', 'borderWidth', 'skew',
-            ],
+            selectedCategories: DEFAULT_CATEGORIES,
             collectionName: '',
+            adapterConfigs: { shadcn: { baseColor: 'neutral', accent: '' } },
             importProgress: 0,
             importPhase: '',
             importMessage: '',

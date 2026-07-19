@@ -40,6 +40,45 @@ export const ALL_CATEGORIES: TokenCategory[] = [
     'skew',
 ];
 
+// ─── Adapter Config & Source ─────────────────────────────────────────────────
+
+/** Per-adapter configuration chosen by the user in the UI. */
+export interface AdapterConfig {
+    /** shadcn: base color theme (neutral | stone | zinc | mauve | olive | mist | taupe) */
+    baseColor?: string;
+    /** shadcn: accent theme merged over the base (blue, green, ...) */
+    accent?: string;
+}
+
+/** Where the tokens actually came from at import time. */
+export interface SourceInfo {
+    kind: 'live' | 'bundled';
+    url?: string;
+    version?: string;
+    fetchedAt?: string;
+}
+
+/** A select/textarea control the UI renders for an adapter. */
+export interface AdapterConfigOption {
+    key: keyof AdapterConfig;
+    label: string;
+    type: 'select' | 'textarea';
+    choices?: { value: string; label: string }[];
+    placeholder?: string;
+}
+
+/** Extra non-color outputs a theme adapter can emit alongside its color tokens. */
+export interface ThemeExtras {
+    floats?: { name: string; value: number; scopes: string[]; codeSyntax?: string }[];
+    strings?: { name: string; value: string; scopes: string[]; codeSyntax?: string }[];
+    /** Mode-aware colors whose alpha differs per mode (state recipes like ring/50). Raw CSS color strings. */
+    stateColors?: { name: string; light: string; dark: string; scopes?: string[]; codeSyntax?: string }[];
+    /** CSS box-shadow strings turned into Figma effect styles. */
+    shadows?: { name: string; value: string }[];
+    /** Simple text styles (values already resolved to px). */
+    textStyles?: { name: string; family?: string; fontSize: number; fontWeight?: number; lineHeight?: number; letterSpacing?: number }[];
+}
+
 // ─── Adapter Interface ───────────────────────────────────────────────────────
 
 export type AdapterType = 'primitives' | 'theme';
@@ -72,22 +111,29 @@ export interface LibraryAdapter {
     /** Supported token categories */
     categories: TokenCategory[];
 
+    /** Optional per-adapter configuration controls rendered by the UI. */
+    configOptions?: AdapterConfigOption[];
+
     /**
      * Fetch and parse all tokens.
      * For 'primitives' adapters: returns ParsedTokenSet
      * For 'theme' adapters: returns ThemeTokens
      */
-    fetchAndParse(): Promise<PrimitiveResult | ThemeResult>;
+    fetchAndParse(config?: AdapterConfig): Promise<PrimitiveResult | ThemeResult>;
 }
 
 export interface PrimitiveResult {
     type: 'primitives';
     tokens: ParsedTokenSet;
+    source?: SourceInfo;
+    extras?: ThemeExtras;
 }
 
 export interface ThemeResult {
     type: 'theme';
     tokens: ThemeTokens;
+    source?: SourceInfo;
+    extras?: ThemeExtras;
 }
 
 // ─── Preview Types ───────────────────────────────────────────────────────────
